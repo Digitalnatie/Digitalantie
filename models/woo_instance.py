@@ -221,15 +221,36 @@ class DigitalnatieWooInstance(models.Model):
     def _wc_url(self, endpoint):
         return self.api_url.rstrip("/") + "/" + str(endpoint).lstrip("/")
 
+    def _get_timeout(self):
+        """Read the global request timeout (in seconds) from system parameters."""
+        param = self.env['ir.config_parameter'].sudo().get_param(
+            'digitalnatie_woocommerce.request_timeout', '90'
+        )
+        try:
+            return max(int(param), 5)
+        except (TypeError, ValueError):
+            return 90
+
+    def _get_page_size(self):
+        """Read the global pagination size from system parameters."""
+        param = self.env['ir.config_parameter'].sudo().get_param(
+            'digitalnatie_woocommerce.page_size', '100'
+        )
+        try:
+            return max(min(int(param), 100), 1)
+        except (TypeError, ValueError):
+            return 100
+
     def _wc_call(self, method, endpoint, params=None, payload=None):
         """Perform a single WooCommerce REST call. Returns (json, response)."""
         self.ensure_one()
         session = self._get_session()
         url = self._wc_url(endpoint)
-        _logger.info("Digitalnatie Woo: %s %s params=%s", method, url, params)
+        _logger.info("WooCommerce Connector: %s %s params=%s", method, url, params)
         try:
             response = session.request(
-                method, url, params=params, json=payload, timeout=90
+                method, url, params=params, json=payload,
+                timeout=self._get_timeout(),
             )
         except Exception as e:
             raise UserError(_("Error connecting to WooCommerce: %s") % e)
@@ -265,9 +286,11 @@ class DigitalnatieWooInstance(models.Model):
         data, _resp = self._wc_call("PUT", endpoint, payload=payload)
         return data
 
-    def _wc_iter(self, endpoint, params=None, per_page=100):
+    def _wc_iter(self, endpoint, params=None, per_page=None):
         """Yield records from a WooCommerce collection, page by page."""
         self.ensure_one()
+        if per_page is None:
+            per_page = self._get_page_size()
         page = 1
         params = dict(params or {})
         while True:

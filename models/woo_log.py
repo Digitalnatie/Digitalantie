@@ -1,4 +1,6 @@
-from odoo import fields, models
+from datetime import timedelta
+
+from odoo import api, fields, models
 
 
 class DigitalnatieWooLog(models.Model):
@@ -6,6 +8,26 @@ class DigitalnatieWooLog(models.Model):
     _description = "WooCommerce Sync Log"
     _order = "create_date desc"
     _rec_name = "summary"
+
+    @api.model
+    def cron_cleanup_logs(self):
+        """Delete log entries older than the configured retention.
+
+        Retention is read from the system parameter
+        ``digitalnatie_woocommerce.log_retention_days``. A value of 0 keeps
+        logs forever.
+        """
+        param = self.env['ir.config_parameter'].sudo().get_param(
+            'digitalnatie_woocommerce.log_retention_days', '30'
+        )
+        try:
+            days = int(param)
+        except (TypeError, ValueError):
+            days = 30
+        if days <= 0:
+            return
+        cutoff = fields.Datetime.now() - timedelta(days=days)
+        self.sudo().search([('create_date', '<', cutoff)]).unlink()
 
     instance_id = fields.Many2one(
         "digitalnatie.woo.instance",

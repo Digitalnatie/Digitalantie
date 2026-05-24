@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>WooCommerce Connector for Odoo 18</title>
+<style>
+    /* Bootstrap 4-compatible, no external CSS, no JS */
+    .wc-hero{background:linear-gradient(135deg,#0b132b 0%,#1c2541 50%,#3a506b 100%);color:#fff;padding:60px 40px;border-radius:8px;margin-bottom:32px;text-align:center}
+    .wc-hero h1{font-size:42px;font-weight:700;margin:0 0 12px}
+    .wc-hero p.lead{font-size:20px;opacity:.92;margin:0 auto;max-width:780px}
+    .wc-hero .badges{margin-top:24px}
+    .wc-hero .badge{display:inline-block;background:#ffffff1a;border:1px solid #ffffff33;padding:6px 14px;border-radius:20px;margin:4px;font-size:13px;color:#fff}
+    .wc-section{padding:40px 32px;margin-bottom:24px;border-radius:8px;background:#fff;border:1px solid #e5e9f2}
+    .wc-section h2{font-size:30px;font-weight:600;color:#0b132b;margin:0 0 8px;border-bottom:3px solid #5bc0be;display:inline-block;padding-bottom:6px}
+    .wc-section p.subtitle{color:#6c757d;margin-bottom:28px}
+    .wc-grid{display:flex;flex-wrap:wrap;gap:20px;margin-top:8px}
+    .wc-card{flex:1 1 280px;background:#f8fafc;border:1px solid #e5e9f2;border-radius:8px;padding:24px}
+    .wc-card .icon{font-size:30px;color:#5bc0be;margin-bottom:10px}
+    .wc-card h3{font-size:17px;font-weight:600;color:#0b132b;margin:0 0 8px}
+    .wc-card p{color:#495057;margin:0;font-size:14px;line-height:1.6}
+    .wc-pair{display:flex;flex-wrap:wrap;gap:24px}
+    .wc-pair > div{flex:1 1 400px;background:#f8fafc;border-left:4px solid #5bc0be;padding:18px 22px;border-radius:0 6px 6px 0}
+    .wc-pair h3{font-size:16px;color:#0b132b;margin:0 0 10px;text-transform:uppercase;letter-spacing:.04em}
+    .wc-pair ul{margin:0;padding-left:18px;color:#495057}
+    .wc-pair li{margin:6px 0;line-height:1.55}
+    .wc-table{width:100%;border-collapse:collapse;margin-top:8px}
+    .wc-table th{background:#0b132b;color:#fff;text-align:left;padding:10px 14px;font-size:14px}
+    .wc-table td{padding:10px 14px;border-bottom:1px solid #e5e9f2;font-size:14px;color:#495057}
+    .wc-table tr:nth-child(even) td{background:#f8fafc}
+    .wc-step{display:flex;align-items:flex-start;gap:16px;background:#f8fafc;padding:18px 22px;border-radius:6px;margin-bottom:12px}
+    .wc-step .num{flex:0 0 36px;height:36px;border-radius:50%;background:#5bc0be;color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+    .wc-step .body h4{margin:0 0 4px;font-size:15px;color:#0b132b}
+    .wc-step .body p{margin:0;color:#495057;font-size:14px}
+    .wc-screenshot{background:#f8fafc;border:2px dashed #cfd5e0;padding:40px;text-align:center;border-radius:8px;margin:12px 0;color:#8a93a3;font-style:italic}
+    .wc-support{background:linear-gradient(135deg,#5bc0be 0%,#3a506b 100%);color:#fff;padding:40px;border-radius:8px;text-align:center}
+    .wc-support h2{color:#fff;border-color:#fff;font-size:26px}
+    .wc-support p{font-size:16px;margin:8px 0}
+    .wc-support a{color:#fff;font-weight:700;text-decoration:underline}
+    .wc-foot{text-align:center;color:#8a93a3;font-size:13px;padding:24px;margin-top:16px}
+</style>
+</head>
+<body>
+
+<section class="wc-hero">
+    <h1>WooCommerce Connector</h1>
+    <p class="lead">Bi-directional sync between WooCommerce and Odoo 18 Community. Products, customers, orders, stock and prices — kept in step in real time, with webhooks, multi-instance support and full meta-field mapping.</p>
+    <div class="badges">
+        <span class="badge">Odoo 18.0 Community</span>
+        <span class="badge">WooCommerce REST v3</span>
+        <span class="badge">Multi-Instance</span>
+        <span class="badge">Webhooks</span>
+        <span class="badge">No SaaS dependency</span>
+    </div>
+</section>
+
+<section class="wc-section">
+    <h2>Why this connector</h2>
+    <p class="subtitle">Built by an Odoo integrator for production WooCommerce ↔ Odoo workflows. Sane defaults, predictable behaviour, no surprises.</p>
+    <div class="wc-grid">
+        <div class="wc-card">
+            <div class="icon">⇄</div>
+            <h3>Bi-directional, fine-grained</h3>
+            <p>Per-instance, per-object direction control: disabled, import, export, or both. Odoo stays authoritative for stock and prices unless you explicitly override.</p>
+        </div>
+        <div class="wc-card">
+            <div class="icon">⚡</div>
+            <h3>Instant via webhooks</h3>
+            <p>Signed HMAC-SHA256 webhooks for orders, products and customers. One-click registration creates them inside WooCommerce.</p>
+        </div>
+        <div class="wc-card">
+            <div class="icon">🏬</div>
+            <h3>Multi-instance</h3>
+            <p>Connect as many WooCommerce stores as you need. Each cron iterates every active store and isolates errors.</p>
+        </div>
+        <div class="wc-card">
+            <div class="icon">🛡️</div>
+            <h3>Safe by default</h3>
+            <p>All cron jobs are inactive on install. Stock recovery imports are gated by an explicit confirmation. SSL verified by default.</p>
+        </div>
+        <div class="wc-card">
+            <div class="icon">📜</div>
+            <h3>Full sync logs</h3>
+            <p>Every operation logged with level, WooCommerce reference and Odoo target. Daily cleanup with configurable retention.</p>
+        </div>
+        <div class="wc-card">
+            <div class="icon">🧩</div>
+            <h3>Custom field mapping</h3>
+            <p>Map any WooCommerce <code>meta_data</code> entry to any Odoo field on products, variants, customers or orders.</p>
+        </div>
+    </div>
+</section>
+
+<section class="wc-section">
+    <h2>What syncs</h2>
+    <p class="subtitle">Everything you need for a typical eCommerce ↔ ERP integration.</p>
+    <div class="wc-pair">
+        <div>
+            <h3>WooCommerce → Odoo</h3>
+            <ul>
+                <li>Products and variants (categories, images, taxes)</li>
+                <li>Customers (billing & shipping addresses)</li>
+                <li>Orders (lines, shipping, fees, discounts, taxes)</li>
+                <li>Stock recovery import (manual)</li>
+                <li>Price recovery import (manual)</li>
+                <li>Custom meta fields</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Odoo → WooCommerce</h3>
+            <ul>
+                <li>Products, prices, descriptions, images</li>
+                <li>Stock levels (Odoo is the source of truth)</li>
+                <li>Categories</li>
+                <li>Order fulfillment status updates</li>
+                <li>Custom Odoo field values → meta_data</li>
+                <li>Full and partial refunds via wizard</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="wc-section">
+    <h2>Built-in cron jobs</h2>
+    <p class="subtitle">All inactive by default. Enable the ones you need under Settings → Technical → Scheduled Actions.</p>
+    <table class="wc-table">
+        <tr><th>Job</th><th>Default frequency</th><th>Active by default</th></tr>
+        <tr><td>Import Orders</td><td>Every 15 minutes</td><td>No</td></tr>
+        <tr><td>Import Products</td><td>Every 6 hours</td><td>No</td></tr>
+        <tr><td>Export Inventory (Odoo → WooCommerce)</td><td>Every 30 minutes</td><td>No</td></tr>
+        <tr><td>Export Prices (Odoo → WooCommerce)</td><td>Every 6 hours</td><td>No</td></tr>
+        <tr><td>Sync Fulfillment Status</td><td>Every 30 minutes</td><td>No</td></tr>
+        <tr><td>Cleanup Old Sync Logs</td><td>Daily</td><td>Yes</td></tr>
+    </table>
+</section>
+
+<section class="wc-section">
+    <h2>Installation in 5 steps</h2>
+    <div class="wc-step"><div class="num">1</div><div class="body"><h4>Drop the module into your addons folder</h4><p>Copy <code>digitalnatie_woocommerce</code> into any folder declared in your <code>addons_path</code>.</p></div></div>
+    <div class="wc-step"><div class="num">2</div><div class="body"><h4>Update apps list & install</h4><p>Activate developer mode, Apps → Update Apps List, then install <strong>WooCommerce Connector</strong>.</p></div></div>
+    <div class="wc-step"><div class="num">3</div><div class="body"><h4>Generate WooCommerce REST keys</h4><p>WooCommerce → Settings → Advanced → REST API → Add Key (Read/Write).</p></div></div>
+    <div class="wc-step"><div class="num">4</div><div class="body"><h4>Create your first instance in Odoo</h4><p>WooCommerce → Instances → New. Fill in URL + keys + warehouse, click <strong>Test Connection</strong>.</p></div></div>
+    <div class="wc-step"><div class="num">5</div><div class="body"><h4>(Optional) Register webhooks and enable crons</h4><p>Click <strong>Register Webhooks</strong> on the instance form. Enable the cron jobs you want under Settings → Technical → Scheduled Actions.</p></div></div>
+</section>
+
+<section class="wc-section">
+    <h2>Configuration overview</h2>
+    <p class="subtitle">Global defaults are applied to every store. Per-store options live on each instance.</p>
+    <table class="wc-table">
+        <tr><th>Setting</th><th>Where</th><th>Default</th></tr>
+        <tr><td>API URL / Consumer Key / Secret</td><td>Per instance</td><td>—</td></tr>
+        <tr><td>SSL verification</td><td>Per instance</td><td>On</td></tr>
+        <tr><td>Warehouse</td><td>Per instance</td><td>First warehouse</td></tr>
+        <tr><td>Sync direction per object</td><td>Per instance</td><td>See README</td></tr>
+        <tr><td>Webhook secret</td><td>Per instance (auto-generated)</td><td>—</td></tr>
+        <tr><td>Request timeout</td><td>Global (Settings → WooCommerce)</td><td>90 seconds</td></tr>
+        <tr><td>Pagination size</td><td>Global</td><td>100</td></tr>
+        <tr><td>Log retention</td><td>Global</td><td>30 days</td></tr>
+        <tr><td>Log level</td><td>Global</td><td>Info</td></tr>
+    </table>
+</section>
+
+<section class="wc-section">
+    <h2>Screenshots</h2>
+    <p class="subtitle">Visual tour of the connector inside Odoo.</p>
+    <div class="wc-screenshot">Screenshot 1 — Instance form with sync direction controls<br/>(coming soon)</div>
+    <div class="wc-screenshot">Screenshot 2 — Sync log list with filter by level / operation<br/>(coming soon)</div>
+    <div class="wc-screenshot">Screenshot 3 — Global settings page under Settings → WooCommerce<br/>(coming soon)</div>
+    <div class="wc-screenshot">Screenshot 4 — Refund wizard launched from an imported order<br/>(coming soon)</div>
+</section>
+
+<section class="wc-section">
+    <h2>FAQ</h2>
+    <div class="wc-pair">
+        <div>
+            <h3>Does this require a license server or activation key?</h3>
+            <p style="margin:0">No. The module is fully self-contained. No telemetry, no SaaS, no key server. Standard OPL-1 conditions apply.</p>
+        </div>
+        <div>
+            <h3>Will scheduled syncs overwrite my Odoo stock?</h3>
+            <p style="margin:0">Never. Scheduled and manual <em>Export Inventory</em> always push Odoo → Woo. To pull stock back, the explicit <strong>Import Stock (Recovery)</strong> action is gated by a confirmation dialog.</p>
+        </div>
+        <div>
+            <h3>Multiple WooCommerce stores?</h3>
+            <p style="margin:0">Yes. Create one instance per store. Crons iterate every active instance and isolate errors.</p>
+        </div>
+        <div>
+            <h3>Which WooCommerce versions?</h3>
+            <p style="margin:0">Any version exposing the <code>wc/v3</code> REST API — WooCommerce 3.5 and later.</p>
+        </div>
+    </div>
+</section>
+
+<section class="wc-support">
+    <h2>Support</h2>
+    <p>Questions, bug reports or feature requests?</p>
+    <p>Email <a href="mailto:support@digitalnatie.be">support@digitalnatie.be</a></p>
+    <p>Website <a href="https://digitalnatie.be">digitalnatie.be</a></p>
+</section>
+
+<div class="wc-foot">
+    WooCommerce Connector — © Digitalnatie — Distributed under OPL-1. Odoo® is a registered trademark of Odoo S.A. WooCommerce® is a registered trademark of Automattic Inc.
+</div>
+
+</body>
+</html>

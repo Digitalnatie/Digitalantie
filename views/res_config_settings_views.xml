@@ -1,22 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="res_config_settings_view_form_woo" model="ir.ui.view">
-        <field name="name">res.config.settings.view.form.inherit.digitalnatie.woo</field>
+        <field name="name">res.config.settings.view.form.inherit.woo.connector</field>
         <field name="model">res.config.settings</field>
         <field name="inherit_id" ref="base.res_config_settings_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//form" position="inside">
-                <app string="WooCommerce" name="digitalnatie_woocommerce">
-                    <block title="WooCommerce API Connection">
-                        <setting string="Store URL"
-                                 help="Base URL of your WooCommerce store (e.g. https://yourstore.com)">
-                            <field name="woo_store_url" placeholder="https://yourstore.com"/>
+                <app string="WooCommerce" name="digitalnatie_woocommerce"
+                     logo="/digitalnatie_woocommerce/static/description/icon.png">
+                    <block title="API"
+                           help="Defaults applied to every WooCommerce store connected to Odoo. Per-store credentials are defined on each instance.">
+                        <setting string="Request Timeout"
+                                 help="Maximum time to wait for a WooCommerce REST API response.">
+                            <field name="woo_request_timeout"/>
+                            <span class="o_form_label">seconds</span>
                         </setting>
-                        <setting string="Consumer Key">
-                            <field name="woo_consumer_key"/>
+                        <setting string="Pagination Size"
+                                 help="Number of records fetched per API page. WooCommerce caps this at 100.">
+                            <field name="woo_page_size"/>
                         </setting>
-                        <setting string="Consumer Secret">
-                            <field name="woo_consumer_secret" password="True"/>
+                    </block>
+                    <block title="Logging">
+                        <setting string="Log Level"
+                                 help="Minimum severity recorded in the WooCommerce sync log.">
+                            <field name="woo_log_level"/>
+                        </setting>
+                        <setting string="Log Retention"
+                                 help="Older log entries are removed by the daily cleanup cron. Set to 0 to keep forever.">
+                            <field name="woo_log_retention_days"/>
+                            <span class="o_form_label">days</span>
+                        </setting>
+                    </block>
+                    <block title="Manage Stores">
+                        <setting string="Connected Stores"
+                                 help="Open the list of WooCommerce stores connected to this Odoo database.">
+                            <button name="%(action_digitalnatie_woo_instance)d"
+                                    type="action" string="Open Stores"
+                                    class="btn-primary"/>
                         </setting>
                     </block>
                 </app>

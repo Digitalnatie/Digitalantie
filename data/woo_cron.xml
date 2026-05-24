@@ -49,4 +49,14 @@
         <field name="interval_number">30</field>
         <field name="active">False</field>
     </record>
+
+    <record id="ir_cron_digitalnatie_woo_cleanup_logs" model="ir.cron">
+        <field name="name">WooCommerce: Cleanup Old Sync Logs</field>
+        <field name="model_id" ref="model_digitalnatie_woo_log"/>
+        <field name="state">code</field>
+        <field name="code">model.cron_cleanup_logs()</field>
+        <field name="interval_type">days</field>
+        <field name="interval_number">1</field>
+        <field name="active">True</field>
+    </record>
 </odoo>
