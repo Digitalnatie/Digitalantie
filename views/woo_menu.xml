@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Root Digitalnatie menu (if not already created in another module) -->
+    <menuitem id="menu_digitalnatie_root" name="Digitalnatie" sequence="50"/>
+
+    <!-- WooCommerce sub-menu -->
+    <menuitem id="menu_digitalnatie_woo_root"
+              name="WooCommerce"
+              parent="menu_digitalnatie_root"
+              sequence="10"/>
+
+    <menuitem id="menu_digitalnatie_woo_instance"
+              name="Instances"
+              parent="menu_digitalnatie_woo_root"
+              action="action_digitalnatie_woo_instance"
+              sequence="10"/>
+
+    <menuitem id="menu_digitalnatie_woo_meta_mapping"
+              name="Meta Field Mappings"
+              parent="menu_digitalnatie_woo_root"
+              action="action_digitalnatie_woo_meta_mapping"
+              sequence="20"/>
+
+    <menuitem id="menu_digitalnatie_woo_order_tag"
+              name="Order Tags"
+              parent="menu_digitalnatie_woo_root"
+              action="action_digitalnatie_woo_order_tag"
+              sequence="30"/>
+
+    <menuitem id="menu_digitalnatie_woo_log"
+              name="Sync Logs"
+              parent="menu_digitalnatie_woo_root"
+              action="action_digitalnatie_woo_log"
+              sequence="40"/>
+</odoo>

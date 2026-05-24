@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_digitalnatie_woo_meta_mapping_tree" model="ir.ui.view">
+        <field name="name">digitalnatie.woo.meta.mapping.list</field>
+        <field name="model">digitalnatie.woo.meta.mapping</field>
+        <field name="arch" type="xml">
+            <list string="Meta Field Mappings" editable="bottom">
+                <field name="instance_id"/>
+                <field name="woo_object"/>
+                <field name="woo_meta_key"/>
+                <field name="odoo_field_name"/>
+                <field name="direction"/>
+                <field name="active" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_digitalnatie_woo_meta_mapping" model="ir.actions.act_window">
+        <field name="name">Meta Field Mappings</field>
+        <field name="res_model">digitalnatie.woo.meta.mapping</field>
+        <field name="view_mode">list</field>
+    </record>
+</odoo>

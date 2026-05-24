@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_woo" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.digitalnatie.woo</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_woo_export_status" type="object"
+                        string="Export Status to WooCommerce"
+                        invisible="not woo_order_id"/>
+                <button name="action_woo_open_refund" type="object"
+                        string="WooCommerce Refund"
+                        invisible="not woo_order_id"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="WooCommerce" name="woo" invisible="not woo_order_id">
+                    <group>
+                        <group>
+                            <field name="woo_instance_id"/>
+                            <field name="woo_order_id" readonly="1"/>
+                            <field name="woo_order_number" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="woo_status" readonly="1"/>
+                            <field name="woo_fulfillment_status"/>
+                            <field name="woo_date_completed" readonly="1"/>
+                        </group>
+                    </group>
+                    <field name="woo_order_tag_ids" widget="many2many_tags"
+                           options="{'color_field': 'color'}"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_order_tree_woo" model="ir.ui.view">
+        <field name="name">sale.order.list.inherit.digitalnatie.woo</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="woo_order_number" optional="hide"/>
+                <field name="woo_status" optional="hide"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_digitalnatie_woo_order_tag_tree" model="ir.ui.view">
+        <field name="name">digitalnatie.woo.order.tag.list</field>
+        <field name="model">digitalnatie.woo.order.tag</field>
+        <field name="arch" type="xml">
+            <list string="WooCommerce Order Tags" editable="bottom">
+                <field name="name"/>
+                <field name="color" widget="color_picker"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_digitalnatie_woo_order_tag" model="ir.actions.act_window">
+        <field name="name">Order Tags</field>
+        <field name="res_model">digitalnatie.woo.order.tag</field>
+        <field name="view_mode">list</field>
+    </record>
+</odoo>

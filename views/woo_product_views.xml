@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_product_template_form_woo" model="ir.ui.view">
+        <field name="name">product.template.form.inherit.digitalnatie.woo</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="WooCommerce" name="woo">
+                    <div class="o_row" colspan="2">
+                        <button name="action_woo_export" type="object"
+                                string="Export to WooCommerce" class="btn-primary"/>
+                        <button name="action_woo_publish" type="object"
+                                string="Publish on WooCommerce"/>
+                        <button name="action_woo_unpublish" type="object"
+                                string="Unpublish on WooCommerce"/>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="woo_instance_id"/>
+                            <field name="woo_product_id" readonly="1"/>
+                            <field name="woo_published"/>
+                        </group>
+                        <group>
+                            <field name="woo_image_url"/>
+                            <field name="woo_last_import" readonly="1"/>
+                            <field name="woo_last_export" readonly="1"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_digitalnatie_woo_refund_wizard_form" model="ir.ui.view">
+        <field name="name">digitalnatie.woo.refund.wizard.form</field>
+        <field name="model">digitalnatie.woo.refund.wizard</field>
+        <field name="arch" type="xml">
+            <form string="WooCommerce Refund">
+                <group>
+                    <field name="order_id" readonly="1"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="order_total"/>
+                    <field name="refund_type"/>
+                    <field name="amount" invisible="refund_type == 'full'"
+                           required="refund_type == 'partial'"/>
+                    <field name="reason"/>
+                    <field name="restock_items"/>
+                </group>
+                <footer>
+                    <button name="action_confirm" type="object" string="Refund"
+                            class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
