@@ -1,4 +1,5 @@
 # WooCommerce Connector
+<img width="1693" height="929" alt="image" src="https://github.com/user-attachments/assets/d1ddfbf9-38a2-40e3-a64d-7075526167e4" />
 
 **Bi-directional WooCommerce ↔ Odoo 18 connector — multi-instance, webhooks, custom field mapping.**
 
@@ -7,6 +8,7 @@ and keep products, customers, orders, inventory and prices in sync — without
 external SaaS, without telemetry, without activation keys.
 
 ---
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/0b6aaa81-b3b0-4b0a-88b8-030d61367cb6" />
 
 ## Features
 
@@ -23,6 +25,7 @@ external SaaS, without telemetry, without activation keys.
 - Stock levels (Odoo is the single source of truth)
 - Order fulfillment status updates
 - Custom Odoo field values written to WooCommerce meta_data
+<img width="1578" height="903" alt="image" src="https://github.com/user-attachments/assets/d45bc995-4349-43b8-b079-424a3496ba1e" />
 
 ### Real-time updates
 - Signed WooCommerce webhooks for instant order, product and customer
