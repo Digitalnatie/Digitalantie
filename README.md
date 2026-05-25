@@ -1,192 +1,82 @@
-# WooCommerce Connector
+# WooCommerce Connector for Odoo 18
 
-**Bi-directional WooCommerce ↔ Odoo 18 connector — multi-instance, webhooks, custom field mapping.**
+**Bi-directional WooCommerce ↔ Odoo 18 sync — multi-instance, webhooks, custom field mapping.**
 
-Connect one or several WooCommerce stores to your Odoo 18 Community database
-and keep products, customers, orders, inventory and prices in sync — without
-external SaaS, without telemetry, without activation keys.
-
----
-
-## Features
-
-### WooCommerce → Odoo (Import)
-- Products and variants (with categories, images, tags, taxes)
-- Customers (billing/shipping addresses, contact info)
-- Orders (with shipping lines, fees, discounts, taxes, attendees)
-- Stock recovery import (manual, on-demand)
-- Price recovery import (manual, on-demand)
-- Custom WooCommerce meta fields mapped to Odoo fields
-
-### Odoo → WooCommerce (Export)
-- Products and variants (descriptions, images, prices, publication state)
-- Stock levels (Odoo is the single source of truth)
-- Order fulfillment status updates
-- Custom Odoo field values written to WooCommerce meta_data
-
-### Real-time updates
-- Signed WooCommerce webhooks for instant order, product and customer
-  notifications
-- One-click webhook registration from the instance form
-
-### Operations
-- Multi-instance: connect as many stores as you need
-- Per-instance, per-object direction control
-  (disabled / import / export / bi-directional)
-- Scheduled cron jobs (disabled by default — enable per your workload)
-- Sync log with operation, level, WooCommerce reference and Odoo target
-- Refund wizard (full and partial WooCommerce refunds from Odoo)
-- Connection test button
-- Automatic log cleanup (configurable retention)
-
-### Safety
-- Stock and prices flow Odoo → WooCommerce in scheduled syncs (Odoo is
-  authoritative). Recovery imports are explicit, separate actions guarded
-  by a confirmation dialog.
-- Configurable per-store SSL verification
-- Per-cron error isolation: a failing store never blocks the others
+![Odoo 18.0](https://img.shields.io/badge/Odoo-18.0%20Community-714B67?logo=odoo&logoColor=white)
+![WooCommerce](https://img.shields.io/badge/WooCommerce-REST%20v3-96588A?logo=woocommerce&logoColor=white)
+![License](https://img.shields.io/badge/License-OPL--1-blue)
+![Price](https://img.shields.io/badge/Price-%E2%82%AC199-green)
 
 ---
+
+Connect one or several WooCommerce stores to your Odoo 18 Community database and keep products, customers, orders, inventory and prices in sync — without external SaaS, without telemetry, without activation keys.
+
+## What syncs
+
+| Direction | Objects |
+|-----------|---------|
+| WooCommerce → Odoo | Products & variants, Customers, Orders, Stock recovery (manual), Price recovery (manual), Custom meta fields |
+| Odoo → WooCommerce | Products, prices, images, Stock levels, Fulfillment status, Custom field values, Refunds |
+
+## Key features
+
+- **Bi-directional, per-object direction control** — disabled / import / export / both
+- **Instant webhooks** — HMAC-SHA256 signed, one-click registration
+- **Multi-instance** — connect as many WooCommerce stores as you need
+- **Refund wizard** — full and partial WooCommerce refunds from Odoo
+- **Custom field mapping** — map any `meta_data` key to any Odoo field
+- **Full sync logs** — every operation logged with level, WC reference and Odoo target
+- **No SaaS** — fully self-contained, no phone-home, no activation key
 
 ## Requirements
 
-- Odoo 18.0 Community
-- Python `requests` library (shipped with Odoo)
-- A WooCommerce store with REST API enabled
+- Odoo 18.0 Community (or Enterprise)
+- Python `requests` library (ships with Odoo)
+- A WooCommerce store with REST API enabled (WooCommerce 3.5+)
 
----
+## Quick install
 
-## Installation
+1. Copy `digitalnatie_woocommerce/` into your Odoo `addons_path`
+2. Apps → **Update Apps List** → install **WooCommerce Connector**
+3. WooCommerce → Instances → **New** → enter URL + keys → **Test Connection**
 
-See [INSTALL.md](INSTALL.md) for full step-by-step instructions.
-
-Short version:
-1. Copy the `digitalnatie_woocommerce` folder into your Odoo `addons` path
-2. Update the apps list (Apps → Update Apps List)
-3. Install **WooCommerce Connector**
-
----
-
-## Configuration
-
-### 1. WooCommerce side — generate REST API keys
-1. WooCommerce → Settings → Advanced → REST API → **Add Key**
-2. Permission: **Read/Write**
-3. Copy the Consumer Key and Consumer Secret
-
-### 2. Odoo side — connect your store
-1. WooCommerce → Instances → **New**
-2. Fill in:
-   - **Name**: any label
-   - **API Base URL**: `https://yourstore.com/wp-json/wc/v3/`
-   - **Consumer Key** and **Consumer Secret**
-   - **Warehouse**: the warehouse used for inventory sync
-3. Click **Test Connection**
-4. Choose the sync direction per object on the **Sync Settings** tab
-
-### 3. Webhooks (optional, recommended for instant updates)
-On the instance form, click **Register Webhooks**. The module creates
-order/product/customer webhooks in WooCommerce, pointing back to a unique
-URL on your Odoo instance, signed with a random secret.
-
-### 4. Global defaults
-**Settings → WooCommerce**:
-- Request timeout (default 90s)
-- Pagination size (default 100)
-- Log retention (default 30 days)
-- Log level (default Info)
-
----
-
-## Sync flow
-
-| Object       | Direction (default)      | Triggered by                              |
-|--------------|--------------------------|-------------------------------------------|
-| Products     | Bi-directional           | Cron (off by default), button, webhook    |
-| Customers    | Import only              | Cron (off by default), button, webhook    |
-| Orders       | Import only              | Cron (off by default), button, webhook    |
-| Inventory    | Export (Odoo → Woo)      | Cron (off by default), button             |
-| Prices       | Export (Odoo → Woo)      | Cron (off by default), button             |
-| Fulfillment  | Bi-directional           | Cron (off by default), button             |
-
-To activate a cron: **Settings → Technical → Scheduled Actions →
-WooCommerce: …** and tick *Active*.
-
----
+See [`digitalnatie_woocommerce/INSTALL.md`](digitalnatie_woocommerce/INSTALL.md) for the full step-by-step guide.
 
 ## Cron jobs
 
-The module ships with these cron jobs (all **inactive** by default — enable
-the ones you need):
+All inactive by default — enable what you need:
 
-| Name                                  | Default frequency |
-|---------------------------------------|-------------------|
-| Import Orders                         | every 15 minutes  |
-| Import Products                       | every 6 hours     |
-| Export Inventory (Odoo → WooCommerce) | every 30 minutes  |
-| Export Prices (Odoo → WooCommerce)    | every 6 hours     |
-| Sync Fulfillment Status               | every 30 minutes  |
-| Cleanup Old Sync Logs                 | daily (active)    |
-
-Each cron iterates over every active instance and isolates errors so that
-one failing store does not block the others.
-
----
-
-## FAQ
-
-**Does this overwrite Odoo stock with WooCommerce stock?**
-No. Scheduled and manual *Export Inventory* always pushes Odoo → Woo. To
-import stock from WooCommerce (one-off, e.g. after a Woo-only adjustment),
-use **Import Stock (Recovery)** — it is gated by a confirmation dialog.
-
-**Can I connect multiple WooCommerce stores?**
-Yes. Create one instance record per store. Each cron iterates over all
-active instances.
-
-**Does this require an internet activation server?**
-No. The module is fully self-contained. No telemetry, no SaaS, no key
-server.
-
-**Which WooCommerce versions are supported?**
-Any version exposing the `wc/v3` REST API (WooCommerce 3.5+).
-
----
-
-## Troubleshooting
-
-| Symptom                                  | Where to look                                |
-|------------------------------------------|----------------------------------------------|
-| Connection test fails                    | Instance form → check URL and keys, click Test Connection |
-| Webhook not firing                       | WooCommerce → Settings → Advanced → Webhooks → Delivery log |
-| Sync error                               | WooCommerce → Sync Logs (filter by Level = Error) |
-| SSL error on staging WooCommerce         | Instance form → uncheck **Verify SSL** (dev only) |
-| Cron not running                         | Settings → Technical → Scheduled Actions → activate it |
-| Log table growing                        | Settings → WooCommerce → reduce Log Retention |
-
----
+| Job | Frequency |
+|-----|-----------|
+| Import Orders | Every 15 min |
+| Import Products | Every 6 hours |
+| Export Inventory | Every 30 min |
+| Export Prices | Every 6 hours |
+| Sync Fulfillment Status | Every 30 min |
+| **Cleanup Old Sync Logs** | **Daily (active)** |
 
 ## Security
 
-- Per-store credentials are stored in the database (Consumer Key/Secret).
-  Restrict access to the `digitalnatie.woo.instance` model to administrators.
-- Webhooks are validated with HMAC-SHA256 against the per-instance secret.
-- Public webhook endpoint requires a valid signature; invalid signatures
-  return HTTP 401 without revealing whether the instance exists.
+- Webhook payloads validated with HMAC-SHA256 per-instance secret
+- Consumer Key / Secret stored in DB, restricted to Odoo administrators
+- SSL verification on by default
+- Zero telemetry, zero outbound calls except to your configured WooCommerce endpoint
 
-See [SECURITY.md](SECURITY.md) for disclosure policy.
-
----
+See [`digitalnatie_woocommerce/SECURITY.md`](digitalnatie_woocommerce/SECURITY.md) for the disclosure policy.
 
 ## Support
 
-- Email: **support@digitalnatie.be**
-- Website: [https://digitalnatie.be](https://digitalnatie.be)
+- **Email:** support@digitalnatie.be
+- **Website:** https://digitalnatie.be
 
 ## License
 
-OPL-1 — see [LICENSE](LICENSE) for the full text.
+OPL-1 — see [`digitalnatie_woocommerce/LICENSE`](digitalnatie_woocommerce/LICENSE) for the full text.
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md).
+See [`digitalnatie_woocommerce/CHANGELOG.md`](digitalnatie_woocommerce/CHANGELOG.md).
+
+---
+
+*Odoo® is a registered trademark of Odoo S.A. WooCommerce® is a registered trademark of Automattic Inc.*
