@@ -3,516 +3,484 @@
 <head><meta charset="UTF-8"/></head>
 <body>
 
-<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1d1d1f;background:#ffffff;max-width:960px;margin:0 auto;padding:0 0 60px;">
+<!-- ═══════════════ OUTER WRAPPER ═══════════════ -->
+<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1d1d1f;background:#ffffff;max-width:900px;margin:0 auto;padding:0;">
 
-  <!-- ═══════════════════════════════════════════════════════
-       HERO SECTION
-  ═══════════════════════════════════════════════════════ -->
-  <div style="text-align:center;padding:56px 32px 40px;background:linear-gradient(180deg,#fafafa 0%,#ffffff 100%);">
+<!-- ═══════════════ HERO ═══════════════ -->
+<div style="background:#f7f7f7;padding:52px 36px 40px;text-align:center;">
 
-    <!-- Badge row -->
-    <div style="margin-bottom:24px;">
-      <span style="display:inline-block;background:#f0ebf8;color:#714B67;font-size:12px;font-weight:600;letter-spacing:.6px;padding:4px 12px;border-radius:20px;margin:3px;">ODOO 18.0 COMMUNITY</span>
-      <span style="display:inline-block;background:#f0ebf8;color:#7F54B3;font-size:12px;font-weight:600;letter-spacing:.6px;padding:4px 12px;border-radius:20px;margin:3px;">WOOCOMMERCE 3.5+</span>
-      <span style="display:inline-block;background:#fff3e0;color:#e65100;font-size:12px;font-weight:600;letter-spacing:.6px;padding:4px 12px;border-radius:20px;margin:3px;">OPL-1 &nbsp;&#183;&nbsp; &#8364;199</span>
-    </div>
-
-    <!-- Main heading -->
-    <h1 style="font-size:40px;font-weight:700;letter-spacing:-1px;line-height:1.15;color:#1d1d1f;margin:0 0 20px;">
-      WooCommerce Connector<br/>
-      <span style="color:#714B67;">for Odoo 18</span>
-    </h1>
-
-    <!-- Subtitle -->
-    <p style="font-size:18px;color:#515154;line-height:1.65;max-width:620px;margin:0 auto 40px;">
-      Bi-directional sync between WooCommerce and Odoo 18 &#8212; multi-instance, real-time webhooks, custom field mapping. Fully self-contained. No SaaS. No activation keys. No telemetry.
-    </p>
-
-    <!-- 4 stat pills -->
-    <div style="margin-bottom:8px;">
-      <span style="display:inline-block;border:1.5px solid #e5e5ea;border-radius:24px;padding:8px 20px;margin:4px;font-size:13px;font-weight:600;color:#1d1d1f;background:#fff;white-space:nowrap;">&#8734; &nbsp;Multi-Instance</span>
-      <span style="display:inline-block;border:1.5px solid #e5e5ea;border-radius:24px;padding:8px 20px;margin:4px;font-size:13px;font-weight:600;color:#1d1d1f;background:#fff;white-space:nowrap;">&#9889; &nbsp;Real-time Webhooks</span>
-      <span style="display:inline-block;border:1.5px solid #e5e5ea;border-radius:24px;padding:8px 20px;margin:4px;font-size:13px;font-weight:600;color:#1d1d1f;background:#fff;white-space:nowrap;">&#128274; &nbsp;HMAC-SHA256 Signed</span>
-      <span style="display:inline-block;border:1.5px solid #e5e5ea;border-radius:24px;padding:8px 20px;margin:4px;font-size:13px;font-weight:600;color:#1d1d1f;background:#fff;white-space:nowrap;">&#9989; &nbsp;No SaaS Required</span>
-    </div>
+  <!-- badge row -->
+  <div style="margin-bottom:22px;">
+    <span style="display:inline-block;background:#f0ebf8;color:#714B67;font-size:11px;font-weight:700;letter-spacing:.7px;padding:4px 13px;border-radius:20px;margin:3px;">ODOO 18.0 COMMUNITY</span><span style="display:inline-block;background:#f0ebf8;color:#7F54B3;font-size:11px;font-weight:700;letter-spacing:.7px;padding:4px 13px;border-radius:20px;margin:3px;">WOOCOMMERCE 3.5+</span><span style="display:inline-block;background:#fff3e0;color:#d84315;font-size:11px;font-weight:700;letter-spacing:.7px;padding:4px 13px;border-radius:20px;margin:3px;">OPL-1 &#183; &#8364;199</span>
   </div>
 
-  <!-- Hero screenshot -->
-  <div style="padding:0 24px 56px;">
-    <img src="screenshot_1.png" alt="WooCommerce Connector &#8212; sync overview" style="display:block;width:100%;height:auto;max-width:100%;border-radius:14px;box-shadow:0 8px 48px rgba(0,0,0,0.10);"/>
+  <!-- heading -->
+  <div style="font-size:38px;font-weight:700;letter-spacing:-1px;line-height:1.15;color:#1d1d1f;margin-bottom:18px;">
+    WooCommerce Connector<br/><span style="color:#714B67;">for Odoo 18</span>
   </div>
 
-  <!-- ═══════════════════════════════════════════════════════
-       WHAT SYNCS
-  ═══════════════════════════════════════════════════════ -->
-  <div style="background:#f5f5f7;padding:56px 32px;">
-
-    <div style="text-align:center;margin-bottom:40px;">
-      <h2 style="font-size:30px;font-weight:700;letter-spacing:-.5px;color:#1d1d1f;margin:0 0 12px;">What syncs</h2>
-      <p style="font-size:16px;color:#6e6e73;margin:0;">Every object, both directions, all under your control.</p>
-    </div>
-
-    <!-- Sync direction table -->
-    <table style="width:100%;border-collapse:collapse;border-radius:12px;overflow:hidden;background:#ffffff;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
-      <thead>
-        <tr style="background:#1d1d1f;">
-          <th style="padding:14px 20px;text-align:left;font-size:12px;font-weight:600;color:#ffffff;letter-spacing:.5px;text-transform:uppercase;">Object</th>
-          <th style="padding:14px 20px;text-align:center;font-size:12px;font-weight:600;color:#b39ddb;letter-spacing:.5px;text-transform:uppercase;">Woo &#8594; Odoo</th>
-          <th style="padding:14px 20px;text-align:center;font-size:12px;font-weight:600;color:#ce93d8;letter-spacing:.5px;text-transform:uppercase;">Odoo &#8594; Woo</th>
-          <th style="padding:14px 20px;text-align:left;font-size:12px;font-weight:600;color:#ffffff;letter-spacing:.5px;text-transform:uppercase;">Trigger</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="padding:14px 20px;font-size:14px;font-weight:600;color:#1d1d1f;">Products &amp; Variants</td>
-          <td style="padding:14px 20px;text-align:center;font-size:16px;color:#34c759;">&#10003;</td>
-          <td style="padding:14px 20px;text-align:center;font-size:16px;color:#34c759;">&#10003;</td>
-          <td style="padding:14px 20px;font-size:13px;color:#6e6e73;">Cron &#183; Button &#183; Webhook</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;background:#fafafa;">
-          <td style="padding:14px 20px;font-size:14px;font-weight:600;color:#1d1d1f;">Customers</td>
-          <td style="padding:14px 20px;text-align:center;font-size:16px;color:#34c759;">&#10003;</td>
-          <td style="padding:14px 20px;text-align:center;font-size:16px;color:#c7c7cc;">&#8212;</td>
-          <td style="padding:14px 20px;font-size:13px;color:#6e6e73;">Cron &#183; Button &#183; Webhook</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="padding:14px 20px;font-size:14px;font-weight:600;color:#1d1d1f;">Orders</td>
-          <td style="padding:14px 20px;text-align:center;font-size:16px;color:#34c759;">&#10003;</td>
-          <td style="padding:14px 20px;text-align:center;font-size:16px;color:#c7c7cc;">&#8212;</td>
-          <td style="padding:14px 20px;font-size:13px;color:#6e6e73;">Cron &#183; Button &#183; Webhook</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;background:#fafafa;">
-          <td style="padding:14px 20px;font-size:14px;font-weight:600;color:#1d1d1f;">Stock Levels</td>
-          <td style="padding:14px 20px;text-align:center;font-size:16px;color:#c7c7cc;">&#8212;</td>
-          <td style="padding:14px 20px;text-align:center;font-size:16px;color:#34c759;">&#10003;</td>
-          <td style="padding:14px 20px;font-size:13px;color:#6e6e73;">Cron &#183; Button</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="padding:14px 20px;font-size:14px;font-weight:600;color:#1d1d1f;">Prices</td>
-          <td style="padding:14px 20px;text-align:center;font-size:16px;color:#c7c7cc;">&#8212;</td>
-          <td style="padding:14px 20px;text-align:center;font-size:16px;color:#34c759;">&#10003;</td>
-          <td style="padding:14px 20px;font-size:13px;color:#6e6e73;">Cron &#183; Button</td>
-        </tr>
-        <tr style="background:#fafafa;">
-          <td style="padding:14px 20px;font-size:14px;font-weight:600;color:#1d1d1f;">Fulfillment Status</td>
-          <td style="padding:14px 20px;text-align:center;font-size:16px;color:#34c759;">&#10003;</td>
-          <td style="padding:14px 20px;text-align:center;font-size:16px;color:#34c759;">&#10003;</td>
-          <td style="padding:14px 20px;font-size:13px;color:#6e6e73;">Cron &#183; Button</td>
-        </tr>
-      </tbody>
-    </table>
-
+  <!-- subtitle -->
+  <div style="font-size:17px;color:#515154;line-height:1.65;max-width:580px;margin:0 auto 36px;">
+    Bi-directional sync between WooCommerce and Odoo 18 &#8212; multi-instance, real-time webhooks, custom field mapping. Fully self-contained. No SaaS. No activation keys. No telemetry.
   </div>
 
-  <!-- ═══════════════════════════════════════════════════════
-       FEATURE OVERVIEW SCREENSHOT
-  ═══════════════════════════════════════════════════════ -->
-  <div style="padding:56px 24px;">
-    <div style="text-align:center;margin-bottom:32px;">
-      <h2 style="font-size:30px;font-weight:700;letter-spacing:-.5px;color:#1d1d1f;margin:0 0 12px;">All features, at a glance</h2>
-      <p style="font-size:16px;color:#6e6e73;margin:0;">Everything you need &#8212; built in, nothing extra required.</p>
-    </div>
-    <img src="screenshot_2.png" alt="WooCommerce Connector &#8212; feature overview" style="display:block;width:100%;height:auto;max-width:100%;border-radius:14px;box-shadow:0 8px 48px rgba(0,0,0,0.10);"/>
+  <!-- stat pills -->
+  <div>
+    <span style="display:inline-block;border:1.5px solid #d8d8d8;border-radius:24px;padding:7px 18px;margin:3px;font-size:13px;font-weight:600;color:#1d1d1f;background:#ffffff;">&#8734;&nbsp; Multi-Instance</span><span style="display:inline-block;border:1.5px solid #d8d8d8;border-radius:24px;padding:7px 18px;margin:3px;font-size:13px;font-weight:600;color:#1d1d1f;background:#ffffff;">&#9889;&nbsp; Real-time Webhooks</span><span style="display:inline-block;border:1.5px solid #d8d8d8;border-radius:24px;padding:7px 18px;margin:3px;font-size:13px;font-weight:600;color:#1d1d1f;background:#ffffff;">&#128274;&nbsp; HMAC-SHA256</span><span style="display:inline-block;border:1.5px solid #d8d8d8;border-radius:24px;padding:7px 18px;margin:3px;font-size:13px;font-weight:600;color:#1d1d1f;background:#ffffff;">&#9989;&nbsp; No SaaS Required</span>
   </div>
 
-  <!-- ═══════════════════════════════════════════════════════
-       KEY FEATURES GRID
-  ═══════════════════════════════════════════════════════ -->
-  <div style="background:#f5f5f7;padding:56px 32px;">
+</div>
 
-    <div style="text-align:center;margin-bottom:40px;">
-      <h2 style="font-size:30px;font-weight:700;letter-spacing:-.5px;color:#1d1d1f;margin:0 0 12px;">Key features</h2>
-      <p style="font-size:16px;color:#6e6e73;margin:0;">Built for production &#8212; from day one.</p>
-    </div>
+<!-- hero screenshot -->
+<div style="background:#ffffff;padding:36px 28px;">
+  <img src="screenshot_1.png" alt="WooCommerce Connector overview" width="100%" style="display:block;width:100%;height:auto;border-radius:10px;"/>
+</div>
 
-    <!-- Row 1 -->
-    <table style="width:100%;border-collapse:separate;border-spacing:0;margin-bottom:16px;">
-      <tr>
-        <td style="width:33.33%;padding:0 8px 0 0;vertical-align:top;">
-          <div style="background:#ffffff;border-radius:12px;padding:28px 24px;box-shadow:0 2px 12px rgba(0,0,0,0.05);">
-            <div style="font-size:28px;margin-bottom:12px;">&#8644;</div>
-            <div style="font-size:15px;font-weight:700;color:#1d1d1f;margin-bottom:8px;">Bi-directional Control</div>
-            <div style="font-size:14px;color:#6e6e73;line-height:1.6;">Set each object to disabled, import, export, or both &#8212; per store, per object type.</div>
-          </div>
-        </td>
-        <td style="width:33.33%;padding:0 4px;vertical-align:top;">
-          <div style="background:#ffffff;border-radius:12px;padding:28px 24px;box-shadow:0 2px 12px rgba(0,0,0,0.05);">
-            <div style="font-size:28px;margin-bottom:12px;">&#9889;</div>
-            <div style="font-size:15px;font-weight:700;color:#1d1d1f;margin-bottom:8px;">Instant Webhooks</div>
-            <div style="font-size:14px;color:#6e6e73;line-height:1.6;">HMAC-SHA256 signed webhooks. One-click registration from the instance form. Real-time updates.</div>
-          </div>
-        </td>
-        <td style="width:33.33%;padding:0 0 0 8px;vertical-align:top;">
-          <div style="background:#ffffff;border-radius:12px;padding:28px 24px;box-shadow:0 2px 12px rgba(0,0,0,0.05);">
-            <div style="font-size:28px;margin-bottom:12px;">&#127981;</div>
-            <div style="font-size:15px;font-weight:700;color:#1d1d1f;margin-bottom:8px;">Multi-Instance</div>
-            <div style="font-size:14px;color:#6e6e73;line-height:1.6;">Connect as many WooCommerce stores as you need. Each cron iterates all active instances independently.</div>
-          </div>
-        </td>
+<!-- ═══════════════ WHAT SYNCS ═══════════════ -->
+<div style="background:#f5f5f7;padding:52px 28px;">
+
+  <div style="text-align:center;margin-bottom:32px;">
+    <div style="font-size:26px;font-weight:700;color:#1d1d1f;margin-bottom:10px;">What syncs</div>
+    <div style="font-size:15px;color:#6e6e73;">Every object, both directions, all under your control.</div>
+  </div>
+
+  <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;background:#ffffff;border-radius:10px;overflow:hidden;">
+    <thead>
+      <tr style="background:#1d1d1f;">
+        <th style="padding:13px 18px;text-align:left;font-size:11px;font-weight:700;color:#ffffff;letter-spacing:.6px;text-transform:uppercase;">Object</th>
+        <th style="padding:13px 18px;text-align:center;font-size:11px;font-weight:700;color:#b39ddb;letter-spacing:.6px;text-transform:uppercase;">Woo &#8594; Odoo</th>
+        <th style="padding:13px 18px;text-align:center;font-size:11px;font-weight:700;color:#ce93d8;letter-spacing:.6px;text-transform:uppercase;">Odoo &#8594; Woo</th>
+        <th style="padding:13px 18px;text-align:left;font-size:11px;font-weight:700;color:#ffffff;letter-spacing:.6px;text-transform:uppercase;">Trigger</th>
       </tr>
-    </table>
-
-    <!-- Row 2 -->
-    <table style="width:100%;border-collapse:separate;border-spacing:0;">
-      <tr>
-        <td style="width:33.33%;padding:0 8px 0 0;vertical-align:top;">
-          <div style="background:#ffffff;border-radius:12px;padding:28px 24px;box-shadow:0 2px 12px rgba(0,0,0,0.05);">
-            <div style="font-size:28px;margin-bottom:12px;">&#128203;</div>
-            <div style="font-size:15px;font-weight:700;color:#1d1d1f;margin-bottom:8px;">Full Sync Logs</div>
-            <div style="font-size:14px;color:#6e6e73;line-height:1.6;">Every operation logged with level, WooCommerce reference, and Odoo target. Configurable retention.</div>
-          </div>
-        </td>
-        <td style="width:33.33%;padding:0 4px;vertical-align:top;">
-          <div style="background:#ffffff;border-radius:12px;padding:28px 24px;box-shadow:0 2px 12px rgba(0,0,0,0.05);">
-            <div style="font-size:28px;margin-bottom:12px;">&#128295;</div>
-            <div style="font-size:15px;font-weight:700;color:#1d1d1f;margin-bottom:8px;">Custom Field Mapping</div>
-            <div style="font-size:14px;color:#6e6e73;line-height:1.6;">Map any WooCommerce <code style="font-size:12px;background:#f5f5f7;padding:1px 5px;border-radius:4px;">meta_data</code> key to any Odoo field &#8212; and back.</div>
-          </div>
-        </td>
-        <td style="width:33.33%;padding:0 0 0 8px;vertical-align:top;">
-          <div style="background:#ffffff;border-radius:12px;padding:28px 24px;box-shadow:0 2px 12px rgba(0,0,0,0.05);">
-            <div style="font-size:28px;margin-bottom:12px;">&#128260;</div>
-            <div style="font-size:15px;font-weight:700;color:#1d1d1f;margin-bottom:8px;">Refund Wizard</div>
-            <div style="font-size:14px;color:#6e6e73;line-height:1.6;">Trigger full or partial WooCommerce refunds directly from the Odoo order &#8212; no WooCommerce login needed.</div>
-          </div>
-        </td>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #f0f0f0;">
+        <td style="padding:13px 18px;font-size:14px;font-weight:600;color:#1d1d1f;">Products &amp; Variants</td>
+        <td style="padding:13px 18px;text-align:center;font-size:15px;color:#34c759;font-weight:700;">&#10003;</td>
+        <td style="padding:13px 18px;text-align:center;font-size:15px;color:#34c759;font-weight:700;">&#10003;</td>
+        <td style="padding:13px 18px;font-size:12px;color:#6e6e73;">Cron &#183; Button &#183; Webhook</td>
       </tr>
-    </table>
+      <tr style="border-bottom:1px solid #f0f0f0;background:#fafafa;">
+        <td style="padding:13px 18px;font-size:14px;font-weight:600;color:#1d1d1f;">Customers</td>
+        <td style="padding:13px 18px;text-align:center;font-size:15px;color:#34c759;font-weight:700;">&#10003;</td>
+        <td style="padding:13px 18px;text-align:center;font-size:15px;color:#c0c0c0;">&#8212;</td>
+        <td style="padding:13px 18px;font-size:12px;color:#6e6e73;">Cron &#183; Button &#183; Webhook</td>
+      </tr>
+      <tr style="border-bottom:1px solid #f0f0f0;">
+        <td style="padding:13px 18px;font-size:14px;font-weight:600;color:#1d1d1f;">Orders</td>
+        <td style="padding:13px 18px;text-align:center;font-size:15px;color:#34c759;font-weight:700;">&#10003;</td>
+        <td style="padding:13px 18px;text-align:center;font-size:15px;color:#c0c0c0;">&#8212;</td>
+        <td style="padding:13px 18px;font-size:12px;color:#6e6e73;">Cron &#183; Button &#183; Webhook</td>
+      </tr>
+      <tr style="border-bottom:1px solid #f0f0f0;background:#fafafa;">
+        <td style="padding:13px 18px;font-size:14px;font-weight:600;color:#1d1d1f;">Stock Levels</td>
+        <td style="padding:13px 18px;text-align:center;font-size:15px;color:#c0c0c0;">&#8212;</td>
+        <td style="padding:13px 18px;text-align:center;font-size:15px;color:#34c759;font-weight:700;">&#10003;</td>
+        <td style="padding:13px 18px;font-size:12px;color:#6e6e73;">Cron &#183; Button</td>
+      </tr>
+      <tr style="border-bottom:1px solid #f0f0f0;">
+        <td style="padding:13px 18px;font-size:14px;font-weight:600;color:#1d1d1f;">Prices</td>
+        <td style="padding:13px 18px;text-align:center;font-size:15px;color:#c0c0c0;">&#8212;</td>
+        <td style="padding:13px 18px;text-align:center;font-size:15px;color:#34c759;font-weight:700;">&#10003;</td>
+        <td style="padding:13px 18px;font-size:12px;color:#6e6e73;">Cron &#183; Button</td>
+      </tr>
+      <tr style="background:#fafafa;">
+        <td style="padding:13px 18px;font-size:14px;font-weight:600;color:#1d1d1f;">Fulfillment Status</td>
+        <td style="padding:13px 18px;text-align:center;font-size:15px;color:#34c759;font-weight:700;">&#10003;</td>
+        <td style="padding:13px 18px;text-align:center;font-size:15px;color:#34c759;font-weight:700;">&#10003;</td>
+        <td style="padding:13px 18px;font-size:12px;color:#6e6e73;">Cron &#183; Button</td>
+      </tr>
+    </tbody>
+  </table>
 
+</div>
+
+<!-- ═══════════════ SCREENSHOT 2 ═══════════════ -->
+<div style="background:#ffffff;padding:52px 28px;">
+  <div style="text-align:center;margin-bottom:28px;">
+    <div style="font-size:26px;font-weight:700;color:#1d1d1f;margin-bottom:10px;">All features, at a glance</div>
+    <div style="font-size:15px;color:#6e6e73;">Everything you need &#8212; built in, nothing extra required.</div>
+  </div>
+  <img src="screenshot_2.png" alt="Feature overview" width="100%" style="display:block;width:100%;height:auto;border-radius:10px;"/>
+</div>
+
+<!-- ═══════════════ KEY FEATURES GRID ═══════════════ -->
+<div style="background:#f5f5f7;padding:52px 28px;">
+
+  <div style="text-align:center;margin-bottom:32px;">
+    <div style="font-size:26px;font-weight:700;color:#1d1d1f;margin-bottom:10px;">Key features</div>
+    <div style="font-size:15px;color:#6e6e73;">Built for production from day one.</div>
   </div>
 
-  <!-- ═══════════════════════════════════════════════════════
-       REAL UI SCREENSHOT
-  ═══════════════════════════════════════════════════════ -->
-  <div style="padding:56px 24px;">
-    <div style="text-align:center;margin-bottom:32px;">
-      <h2 style="font-size:30px;font-weight:700;letter-spacing:-.5px;color:#1d1d1f;margin:0 0 12px;">Real Odoo 18 UI</h2>
-      <p style="font-size:16px;color:#6e6e73;margin:0;">Everything accessible from a single instance form &#8212; no hidden menus.</p>
-    </div>
-    <img src="screenshot_3.png" alt="WooCommerce Connector &#8212; Odoo 18 instance form" style="display:block;width:100%;height:auto;max-width:100%;border-radius:14px;box-shadow:0 8px 48px rgba(0,0,0,0.10);"/>
-    <!-- Caption -->
-    <table style="width:100%;border-collapse:collapse;margin-top:16px;">
+  <!-- row 1 -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-bottom:12px;">
+    <tr>
+      <td width="33%" valign="top" style="padding-right:6px;">
+        <div style="background:#ffffff;border-radius:10px;padding:24px 20px;">
+          <div style="font-size:26px;margin-bottom:10px;">&#8644;</div>
+          <div style="font-size:14px;font-weight:700;color:#1d1d1f;margin-bottom:7px;">Bi-directional Control</div>
+          <div style="font-size:13px;color:#6e6e73;line-height:1.6;">Set each object to disabled, import, export, or both &#8212; per store, per object type.</div>
+        </div>
+      </td>
+      <td width="33%" valign="top" style="padding-left:6px;padding-right:6px;">
+        <div style="background:#ffffff;border-radius:10px;padding:24px 20px;">
+          <div style="font-size:26px;margin-bottom:10px;">&#9889;</div>
+          <div style="font-size:14px;font-weight:700;color:#1d1d1f;margin-bottom:7px;">Instant Webhooks</div>
+          <div style="font-size:13px;color:#6e6e73;line-height:1.6;">HMAC-SHA256 signed. One-click registration from the instance form. Real-time updates.</div>
+        </div>
+      </td>
+      <td width="34%" valign="top" style="padding-left:6px;">
+        <div style="background:#ffffff;border-radius:10px;padding:24px 20px;">
+          <div style="font-size:26px;margin-bottom:10px;">&#127981;</div>
+          <div style="font-size:14px;font-weight:700;color:#1d1d1f;margin-bottom:7px;">Multi-Instance</div>
+          <div style="font-size:13px;color:#6e6e73;line-height:1.6;">Connect as many stores as you need. Each cron iterates all active instances independently.</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <!-- row 2 -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+    <tr>
+      <td width="33%" valign="top" style="padding-right:6px;">
+        <div style="background:#ffffff;border-radius:10px;padding:24px 20px;">
+          <div style="font-size:26px;margin-bottom:10px;">&#128203;</div>
+          <div style="font-size:14px;font-weight:700;color:#1d1d1f;margin-bottom:7px;">Full Sync Logs</div>
+          <div style="font-size:13px;color:#6e6e73;line-height:1.6;">Every operation logged with level, WooCommerce reference, and Odoo target. Configurable retention.</div>
+        </div>
+      </td>
+      <td width="33%" valign="top" style="padding-left:6px;padding-right:6px;">
+        <div style="background:#ffffff;border-radius:10px;padding:24px 20px;">
+          <div style="font-size:26px;margin-bottom:10px;">&#128295;</div>
+          <div style="font-size:14px;font-weight:700;color:#1d1d1f;margin-bottom:7px;">Custom Field Mapping</div>
+          <div style="font-size:13px;color:#6e6e73;line-height:1.6;">Map any WooCommerce <code style="background:#f5f5f7;padding:1px 5px;border-radius:3px;font-size:12px;">meta_data</code> key to any Odoo field &#8212; and back.</div>
+        </div>
+      </td>
+      <td width="34%" valign="top" style="padding-left:6px;">
+        <div style="background:#ffffff;border-radius:10px;padding:24px 20px;">
+          <div style="font-size:26px;margin-bottom:10px;">&#128260;</div>
+          <div style="font-size:14px;font-weight:700;color:#1d1d1f;margin-bottom:7px;">Refund Wizard</div>
+          <div style="font-size:13px;color:#6e6e73;line-height:1.6;">Full or partial WooCommerce refunds directly from Odoo &#8212; no WooCommerce login needed.</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+<!-- ═══════════════ SCREENSHOT 3 ═══════════════ -->
+<div style="background:#ffffff;padding:52px 28px;">
+  <div style="text-align:center;margin-bottom:28px;">
+    <div style="font-size:26px;font-weight:700;color:#1d1d1f;margin-bottom:10px;">Real Odoo 18 UI</div>
+    <div style="font-size:15px;color:#6e6e73;">Everything accessible from a single instance form &#8212; no hidden menus.</div>
+  </div>
+  <img src="screenshot_3.png" alt="Odoo 18 instance form" width="100%" style="display:block;width:100%;height:auto;border-radius:10px;"/>
+
+  <!-- caption table under screenshot -->
+  <div style="margin-top:14px;">
+    <table width="100%" cellpadding="14" cellspacing="0" style="border-collapse:collapse;">
       <tr>
-        <td style="width:50%;padding:14px 18px;background:#f5f5f7;border-radius:8px;vertical-align:top;">
-          <div style="font-size:13px;font-weight:700;color:#1d1d1f;margin-bottom:4px;">Actions panel</div>
+        <td width="50%" valign="top" style="background:#f5f5f7;border-radius:8px;padding:14px 16px;">
+          <div style="font-size:12px;font-weight:700;color:#1d1d1f;margin-bottom:5px;">Actions panel</div>
           <div style="font-size:12px;color:#6e6e73;line-height:1.55;">Test Connection &#183; Import/Export Products &#183; Import Customers &amp; Orders &#183; Export Inventory &amp; Prices &#183; Sync Fulfillment &#183; Register Webhooks &#183; Full Sync</div>
         </td>
-        <td style="width:8px;"></td>
-        <td style="width:50%;padding:14px 18px;background:#f5f5f7;border-radius:8px;vertical-align:top;">
-          <div style="font-size:13px;font-weight:700;color:#1d1d1f;margin-bottom:4px;">Sync Settings tab</div>
-          <div style="font-size:12px;color:#6e6e73;line-height:1.55;">Direction per object: Products (bi-directional) &#183; Customers (import) &#183; Orders (import) &#183; Inventory (export) &#183; Prices (export) &#183; Fulfillment (bi-directional)</div>
+        <td width="12" style="padding:0;"></td>
+        <td width="50%" valign="top" style="background:#f5f5f7;border-radius:8px;padding:14px 16px;">
+          <div style="font-size:12px;font-weight:700;color:#1d1d1f;margin-bottom:5px;">Sync Settings tab</div>
+          <div style="font-size:12px;color:#6e6e73;line-height:1.55;">Products (bi-directional) &#183; Customers (import) &#183; Orders (import) &#183; Inventory (export) &#183; Prices (export) &#183; Fulfillment (bi-directional)</div>
         </td>
       </tr>
     </table>
   </div>
+</div>
 
-  <!-- ═══════════════════════════════════════════════════════
-       IMPORT / EXPORT DETAIL
-  ═══════════════════════════════════════════════════════ -->
-  <div style="background:#fafafa;padding:56px 32px;">
+<!-- ═══════════════ IMPORT / EXPORT DETAIL ═══════════════ -->
+<div style="background:#fafafa;padding:52px 28px;">
 
-    <div style="text-align:center;margin-bottom:40px;">
-      <h2 style="font-size:30px;font-weight:700;letter-spacing:-.5px;color:#1d1d1f;margin:0 0 12px;">Complete sync coverage</h2>
-    </div>
+  <div style="text-align:center;margin-bottom:32px;">
+    <div style="font-size:26px;font-weight:700;color:#1d1d1f;margin-bottom:10px;">Complete sync coverage</div>
+  </div>
 
-    <table style="width:100%;border-collapse:separate;border-spacing:0;">
-      <tr>
-        <td style="width:50%;padding:0 10px 0 0;vertical-align:top;">
-          <div style="background:#ffffff;border-radius:12px;padding:28px 24px;box-shadow:0 2px 12px rgba(0,0,0,0.05);">
-            <div style="display:inline-block;background:#f0ebf8;color:#7F54B3;font-size:11px;font-weight:700;letter-spacing:.6px;padding:3px 10px;border-radius:12px;margin-bottom:16px;text-transform:uppercase;">WooCommerce &#8594; Odoo</div>
-            <div style="font-size:14px;color:#3a3a3c;line-height:1.7;padding:5px 0;border-bottom:1px solid #f5f5f7;"><span style="color:#7F54B3;font-weight:700;margin-right:8px;">&#10003;</span>Products &amp; variants (categories, images, tags, taxes)</div>
-            <div style="font-size:14px;color:#3a3a3c;line-height:1.7;padding:5px 0;border-bottom:1px solid #f5f5f7;"><span style="color:#7F54B3;font-weight:700;margin-right:8px;">&#10003;</span>Customers (billing &amp; shipping addresses)</div>
-            <div style="font-size:14px;color:#3a3a3c;line-height:1.7;padding:5px 0;border-bottom:1px solid #f5f5f7;"><span style="color:#7F54B3;font-weight:700;margin-right:8px;">&#10003;</span>Orders (shipping, fees, discounts, taxes)</div>
-            <div style="font-size:14px;color:#3a3a3c;line-height:1.7;padding:5px 0;border-bottom:1px solid #f5f5f7;"><span style="color:#7F54B3;font-weight:700;margin-right:8px;">&#10003;</span>Stock recovery import (manual, on-demand)</div>
-            <div style="font-size:14px;color:#3a3a3c;line-height:1.7;padding:5px 0;border-bottom:1px solid #f5f5f7;"><span style="color:#7F54B3;font-weight:700;margin-right:8px;">&#10003;</span>Price recovery import (manual, on-demand)</div>
-            <div style="font-size:14px;color:#3a3a3c;line-height:1.7;padding:5px 0;"><span style="color:#7F54B3;font-weight:700;margin-right:8px;">&#10003;</span>Custom WooCommerce meta fields &#8594; Odoo fields</div>
-          </div>
-        </td>
-        <td style="width:50%;padding:0 0 0 10px;vertical-align:top;">
-          <div style="background:#ffffff;border-radius:12px;padding:28px 24px;box-shadow:0 2px 12px rgba(0,0,0,0.05);">
-            <div style="display:inline-block;background:#f3eef5;color:#714B67;font-size:11px;font-weight:700;letter-spacing:.6px;padding:3px 10px;border-radius:12px;margin-bottom:16px;text-transform:uppercase;">Odoo &#8594; WooCommerce</div>
-            <div style="font-size:14px;color:#3a3a3c;line-height:1.7;padding:5px 0;border-bottom:1px solid #f5f5f7;"><span style="color:#714B67;font-weight:700;margin-right:8px;">&#10003;</span>Products &amp; variants (descriptions, images, prices)</div>
-            <div style="font-size:14px;color:#3a3a3c;line-height:1.7;padding:5px 0;border-bottom:1px solid #f5f5f7;"><span style="color:#714B67;font-weight:700;margin-right:8px;">&#10003;</span>Publication state (published / draft)</div>
-            <div style="font-size:14px;color:#3a3a3c;line-height:1.7;padding:5px 0;border-bottom:1px solid #f5f5f7;"><span style="color:#714B67;font-weight:700;margin-right:8px;">&#10003;</span>Stock levels (Odoo is single source of truth)</div>
-            <div style="font-size:14px;color:#3a3a3c;line-height:1.7;padding:5px 0;border-bottom:1px solid #f5f5f7;"><span style="color:#714B67;font-weight:700;margin-right:8px;">&#10003;</span>Order fulfillment status updates</div>
-            <div style="font-size:14px;color:#3a3a3c;line-height:1.7;padding:5px 0;border-bottom:1px solid #f5f5f7;"><span style="color:#714B67;font-weight:700;margin-right:8px;">&#10003;</span>Custom Odoo field values &#8594; WooCommerce meta_data</div>
-            <div style="font-size:14px;color:#3a3a3c;line-height:1.7;padding:5px 0;"><span style="color:#714B67;font-weight:700;margin-right:8px;">&#10003;</span>Refunds (full and partial, from Odoo wizard)</div>
-          </div>
-        </td>
+  <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+    <tr>
+      <td width="50%" valign="top" style="padding-right:8px;">
+        <div style="background:#ffffff;border-radius:10px;padding:24px 22px;">
+          <div style="margin-bottom:14px;"><span style="display:inline-block;background:#f0ebf8;color:#7F54B3;font-size:10px;font-weight:700;letter-spacing:.6px;padding:3px 10px;border-radius:12px;text-transform:uppercase;">WooCommerce &#8594; Odoo</span></div>
+          <div style="font-size:13px;color:#333333;padding:5px 0;border-bottom:1px solid #f0f0f0;"><span style="color:#7F54B3;font-weight:700;margin-right:7px;">&#10003;</span>Products &amp; variants (categories, images, tags, taxes)</div>
+          <div style="font-size:13px;color:#333333;padding:5px 0;border-bottom:1px solid #f0f0f0;"><span style="color:#7F54B3;font-weight:700;margin-right:7px;">&#10003;</span>Customers (billing &amp; shipping addresses)</div>
+          <div style="font-size:13px;color:#333333;padding:5px 0;border-bottom:1px solid #f0f0f0;"><span style="color:#7F54B3;font-weight:700;margin-right:7px;">&#10003;</span>Orders (shipping, fees, discounts, taxes)</div>
+          <div style="font-size:13px;color:#333333;padding:5px 0;border-bottom:1px solid #f0f0f0;"><span style="color:#7F54B3;font-weight:700;margin-right:7px;">&#10003;</span>Stock recovery import (manual, on-demand)</div>
+          <div style="font-size:13px;color:#333333;padding:5px 0;border-bottom:1px solid #f0f0f0;"><span style="color:#7F54B3;font-weight:700;margin-right:7px;">&#10003;</span>Price recovery import (manual, on-demand)</div>
+          <div style="font-size:13px;color:#333333;padding:5px 0;"><span style="color:#7F54B3;font-weight:700;margin-right:7px;">&#10003;</span>Custom WooCommerce meta fields &#8594; Odoo fields</div>
+        </div>
+      </td>
+      <td width="50%" valign="top" style="padding-left:8px;">
+        <div style="background:#ffffff;border-radius:10px;padding:24px 22px;">
+          <div style="margin-bottom:14px;"><span style="display:inline-block;background:#f3eef5;color:#714B67;font-size:10px;font-weight:700;letter-spacing:.6px;padding:3px 10px;border-radius:12px;text-transform:uppercase;">Odoo &#8594; WooCommerce</span></div>
+          <div style="font-size:13px;color:#333333;padding:5px 0;border-bottom:1px solid #f0f0f0;"><span style="color:#714B67;font-weight:700;margin-right:7px;">&#10003;</span>Products &amp; variants (descriptions, images, prices)</div>
+          <div style="font-size:13px;color:#333333;padding:5px 0;border-bottom:1px solid #f0f0f0;"><span style="color:#714B67;font-weight:700;margin-right:7px;">&#10003;</span>Publication state (published / draft)</div>
+          <div style="font-size:13px;color:#333333;padding:5px 0;border-bottom:1px solid #f0f0f0;"><span style="color:#714B67;font-weight:700;margin-right:7px;">&#10003;</span>Stock levels (Odoo is single source of truth)</div>
+          <div style="font-size:13px;color:#333333;padding:5px 0;border-bottom:1px solid #f0f0f0;"><span style="color:#714B67;font-weight:700;margin-right:7px;">&#10003;</span>Order fulfillment status updates</div>
+          <div style="font-size:13px;color:#333333;padding:5px 0;border-bottom:1px solid #f0f0f0;"><span style="color:#714B67;font-weight:700;margin-right:7px;">&#10003;</span>Custom Odoo field values &#8594; WooCommerce meta_data</div>
+          <div style="font-size:13px;color:#333333;padding:5px 0;"><span style="color:#714B67;font-weight:700;margin-right:7px;">&#10003;</span>Refunds (full and partial, from Odoo wizard)</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+<!-- ═══════════════ CRON JOBS ═══════════════ -->
+<div style="background:#ffffff;padding:52px 28px;">
+
+  <div style="text-align:center;margin-bottom:32px;">
+    <div style="font-size:26px;font-weight:700;color:#1d1d1f;margin-bottom:10px;">Scheduled cron jobs</div>
+    <div style="font-size:15px;color:#6e6e73;">All disabled by default &#8212; enable only what your workload needs.</div>
+  </div>
+
+  <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-radius:10px;overflow:hidden;">
+    <thead>
+      <tr style="background:#1d1d1f;">
+        <th style="padding:13px 18px;text-align:left;font-size:11px;font-weight:700;color:#ffffff;letter-spacing:.6px;text-transform:uppercase;">Job name</th>
+        <th style="padding:13px 18px;text-align:left;font-size:11px;font-weight:700;color:#ffffff;letter-spacing:.6px;text-transform:uppercase;">Default frequency</th>
+        <th style="padding:13px 18px;text-align:center;font-size:11px;font-weight:700;color:#ffffff;letter-spacing:.6px;text-transform:uppercase;">Active by default</th>
       </tr>
-    </table>
-
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════
-       CRON JOBS
-  ═══════════════════════════════════════════════════════ -->
-  <div style="padding:56px 32px;">
-
-    <div style="text-align:center;margin-bottom:40px;">
-      <h2 style="font-size:30px;font-weight:700;letter-spacing:-.5px;color:#1d1d1f;margin:0 0 12px;">Scheduled cron jobs</h2>
-      <p style="font-size:16px;color:#6e6e73;margin:0;">All disabled by default &#8212; enable only what your workload needs.</p>
-    </div>
-
-    <table style="width:100%;border-collapse:collapse;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
-      <thead>
-        <tr style="background:#1d1d1f;">
-          <th style="padding:14px 20px;text-align:left;font-size:12px;font-weight:600;color:#ffffff;letter-spacing:.5px;text-transform:uppercase;">Job name</th>
-          <th style="padding:14px 20px;text-align:left;font-size:12px;font-weight:600;color:#ffffff;letter-spacing:.5px;text-transform:uppercase;">Default frequency</th>
-          <th style="padding:14px 20px;text-align:center;font-size:12px;font-weight:600;color:#ffffff;letter-spacing:.5px;text-transform:uppercase;">Active by default</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #f0f0f0;background:#ffffff;">
-          <td style="padding:13px 20px;font-size:14px;color:#1d1d1f;font-weight:500;">Import Orders</td>
-          <td style="padding:13px 20px;font-size:14px;color:#6e6e73;">Every 15 minutes</td>
-          <td style="padding:13px 20px;text-align:center;font-size:13px;color:#8e8e93;">No</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;background:#fafafa;">
-          <td style="padding:13px 20px;font-size:14px;color:#1d1d1f;font-weight:500;">Import Products</td>
-          <td style="padding:13px 20px;font-size:14px;color:#6e6e73;">Every 6 hours</td>
-          <td style="padding:13px 20px;text-align:center;font-size:13px;color:#8e8e93;">No</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;background:#ffffff;">
-          <td style="padding:13px 20px;font-size:14px;color:#1d1d1f;font-weight:500;">Export Inventory (Odoo &#8594; WooCommerce)</td>
-          <td style="padding:13px 20px;font-size:14px;color:#6e6e73;">Every 30 minutes</td>
-          <td style="padding:13px 20px;text-align:center;font-size:13px;color:#8e8e93;">No</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;background:#fafafa;">
-          <td style="padding:13px 20px;font-size:14px;color:#1d1d1f;font-weight:500;">Export Prices (Odoo &#8594; WooCommerce)</td>
-          <td style="padding:13px 20px;font-size:14px;color:#6e6e73;">Every 6 hours</td>
-          <td style="padding:13px 20px;text-align:center;font-size:13px;color:#8e8e93;">No</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;background:#ffffff;">
-          <td style="padding:13px 20px;font-size:14px;color:#1d1d1f;font-weight:500;">Sync Fulfillment Status</td>
-          <td style="padding:13px 20px;font-size:14px;color:#6e6e73;">Every 30 minutes</td>
-          <td style="padding:13px 20px;text-align:center;font-size:13px;color:#8e8e93;">No</td>
-        </tr>
-        <tr style="background:#f0f8ee;">
-          <td style="padding:13px 20px;font-size:14px;color:#1d1d1f;font-weight:600;">Cleanup Old Sync Logs</td>
-          <td style="padding:13px 20px;font-size:14px;color:#6e6e73;">Daily</td>
-          <td style="padding:13px 20px;text-align:center;font-size:14px;color:#34c759;font-weight:700;">&#10003; Yes</td>
-        </tr>
-      </tbody>
-    </table>
-
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════
-       INSTALLATION
-  ═══════════════════════════════════════════════════════ -->
-  <div style="background:#f5f5f7;padding:56px 32px;">
-
-    <div style="text-align:center;margin-bottom:40px;">
-      <h2 style="font-size:30px;font-weight:700;letter-spacing:-.5px;color:#1d1d1f;margin:0 0 12px;">Up and running in minutes</h2>
-    </div>
-
-    <table style="width:100%;border-collapse:separate;border-spacing:0;">
-      <tr>
-        <td style="width:50%;padding:0 10px 0 0;vertical-align:top;">
-          <div style="background:#ffffff;border-radius:12px;padding:28px 24px;box-shadow:0 2px 12px rgba(0,0,0,0.05);">
-            <div style="font-size:15px;font-weight:700;color:#1d1d1f;margin-bottom:16px;">Requirements</div>
-            <div style="font-size:14px;color:#3a3a3c;line-height:1.7;padding:5px 0;border-bottom:1px solid #f5f5f7;"><span style="color:#34c759;font-weight:700;margin-right:8px;">&#10003;</span>Odoo 18.0 Community (or Enterprise)</div>
-            <div style="font-size:14px;color:#3a3a3c;line-height:1.7;padding:5px 0;border-bottom:1px solid #f5f5f7;"><span style="color:#34c759;font-weight:700;margin-right:8px;">&#10003;</span>Python <code style="font-size:12px;background:#f5f5f7;padding:1px 5px;border-radius:4px;">requests</code> library (ships with Odoo)</div>
-            <div style="font-size:14px;color:#3a3a3c;line-height:1.7;padding:5px 0;"><span style="color:#34c759;font-weight:700;margin-right:8px;">&#10003;</span>WooCommerce 3.5+ with REST API enabled</div>
-          </div>
-        </td>
-        <td style="width:50%;padding:0 0 0 10px;vertical-align:top;">
-          <div style="background:#ffffff;border-radius:12px;padding:28px 24px;box-shadow:0 2px 12px rgba(0,0,0,0.05);">
-            <div style="font-size:15px;font-weight:700;color:#1d1d1f;margin-bottom:16px;">Quick install</div>
-            <div style="padding:8px 0;border-bottom:1px solid #f5f5f7;font-size:14px;color:#3a3a3c;">
-              <span style="display:inline-block;background:#1d1d1f;color:#fff;font-size:11px;font-weight:700;width:20px;height:20px;border-radius:50%;text-align:center;line-height:20px;margin-right:10px;">1</span>
-              Copy <code style="font-size:12px;background:#f5f5f7;padding:1px 5px;border-radius:4px;">digitalnatie_woocommerce/</code> into your addons path
-            </div>
-            <div style="padding:8px 0;border-bottom:1px solid #f5f5f7;font-size:14px;color:#3a3a3c;">
-              <span style="display:inline-block;background:#1d1d1f;color:#fff;font-size:11px;font-weight:700;width:20px;height:20px;border-radius:50%;text-align:center;line-height:20px;margin-right:10px;">2</span>
-              Apps &#8594; <strong>Update Apps List</strong> &#8594; Install <strong>WooCommerce Connector</strong>
-            </div>
-            <div style="padding:8px 0;border-bottom:1px solid #f5f5f7;font-size:14px;color:#3a3a3c;">
-              <span style="display:inline-block;background:#1d1d1f;color:#fff;font-size:11px;font-weight:700;width:20px;height:20px;border-radius:50%;text-align:center;line-height:20px;margin-right:10px;">3</span>
-              WooCommerce &#8594; Instances &#8594; <strong>New</strong> &#8594; enter URL + API keys
-            </div>
-            <div style="padding:8px 0;font-size:14px;color:#3a3a3c;">
-              <span style="display:inline-block;background:#1d1d1f;color:#fff;font-size:11px;font-weight:700;width:20px;height:20px;border-radius:50%;text-align:center;line-height:20px;margin-right:10px;">4</span>
-              Click <strong>Test Connection</strong> &#8594; Configure directions &#8594; done
-            </div>
-          </div>
-        </td>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #f0f0f0;background:#ffffff;">
+        <td style="padding:12px 18px;font-size:13px;color:#1d1d1f;font-weight:500;">Import Orders</td>
+        <td style="padding:12px 18px;font-size:13px;color:#6e6e73;">Every 15 minutes</td>
+        <td style="padding:12px 18px;text-align:center;font-size:12px;color:#999999;">No</td>
       </tr>
-    </table>
-
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════
-       SECURITY
-  ═══════════════════════════════════════════════════════ -->
-  <div style="padding:56px 32px;">
-
-    <div style="text-align:center;margin-bottom:40px;">
-      <h2 style="font-size:30px;font-weight:700;letter-spacing:-.5px;color:#1d1d1f;margin:0 0 12px;">Built with security first</h2>
-    </div>
-
-    <table style="width:100%;border-collapse:separate;border-spacing:0;">
-      <tr>
-        <td style="width:25%;padding:0 8px 0 0;vertical-align:top;">
-          <div style="background:#f5f5f7;border-radius:12px;padding:24px 20px;text-align:center;">
-            <div style="font-size:32px;margin-bottom:10px;">&#128274;</div>
-            <div style="font-size:13px;font-weight:700;color:#1d1d1f;margin-bottom:6px;">HMAC-SHA256</div>
-            <div style="font-size:12px;color:#6e6e73;line-height:1.5;">Webhook payloads validated with per-instance secret</div>
-          </div>
-        </td>
-        <td style="width:25%;padding:0 4px;vertical-align:top;">
-          <div style="background:#f5f5f7;border-radius:12px;padding:24px 20px;text-align:center;">
-            <div style="font-size:32px;margin-bottom:10px;">&#128373;&#65039;</div>
-            <div style="font-size:13px;font-weight:700;color:#1d1d1f;margin-bottom:6px;">Zero Telemetry</div>
-            <div style="font-size:12px;color:#6e6e73;line-height:1.5;">No outbound calls except to your WooCommerce endpoint</div>
-          </div>
-        </td>
-        <td style="width:25%;padding:0 4px;vertical-align:top;">
-          <div style="background:#f5f5f7;border-radius:12px;padding:24px 20px;text-align:center;">
-            <div style="font-size:32px;margin-bottom:10px;">&#128101;</div>
-            <div style="font-size:13px;font-weight:700;color:#1d1d1f;margin-bottom:6px;">Admin Restricted</div>
-            <div style="font-size:12px;color:#6e6e73;line-height:1.5;">Consumer Key/Secret access restricted to Odoo administrators</div>
-          </div>
-        </td>
-        <td style="width:25%;padding:0 0 0 8px;vertical-align:top;">
-          <div style="background:#f5f5f7;border-radius:12px;padding:24px 20px;text-align:center;">
-            <div style="font-size:32px;margin-bottom:10px;">&#128279;</div>
-            <div style="font-size:13px;font-weight:700;color:#1d1d1f;margin-bottom:6px;">SSL Verified</div>
-            <div style="font-size:12px;color:#6e6e73;line-height:1.5;">SSL verification on by default, configurable per instance</div>
-          </div>
-        </td>
+      <tr style="border-bottom:1px solid #f0f0f0;background:#fafafa;">
+        <td style="padding:12px 18px;font-size:13px;color:#1d1d1f;font-weight:500;">Import Products</td>
+        <td style="padding:12px 18px;font-size:13px;color:#6e6e73;">Every 6 hours</td>
+        <td style="padding:12px 18px;text-align:center;font-size:12px;color:#999999;">No</td>
       </tr>
-    </table>
-
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════
-       FAQ
-  ═══════════════════════════════════════════════════════ -->
-  <div style="background:#f5f5f7;padding:56px 32px;">
-
-    <div style="text-align:center;margin-bottom:40px;">
-      <h2 style="font-size:30px;font-weight:700;letter-spacing:-.5px;color:#1d1d1f;margin:0 0 12px;">Frequently asked questions</h2>
-    </div>
-
-    <div style="max-width:720px;margin:0 auto;">
-
-      <div style="background:#ffffff;border-radius:12px;padding:24px 28px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
-        <div style="font-size:15px;font-weight:700;color:#1d1d1f;margin-bottom:8px;">Does this overwrite Odoo stock with WooCommerce stock?</div>
-        <div style="font-size:14px;color:#6e6e73;line-height:1.65;">No. Scheduled and manual Export Inventory always pushes Odoo &#8594; WooCommerce. To import stock from WooCommerce (one-off recovery), use <strong>Import Stock (Recovery)</strong> &#8212; gated by a confirmation dialog.</div>
-      </div>
-
-      <div style="background:#ffffff;border-radius:12px;padding:24px 28px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
-        <div style="font-size:15px;font-weight:700;color:#1d1d1f;margin-bottom:8px;">Can I connect multiple WooCommerce stores?</div>
-        <div style="font-size:14px;color:#6e6e73;line-height:1.65;">Yes. Create one instance record per store. Each cron job iterates over all active instances independently &#8212; a failing store never blocks the others.</div>
-      </div>
-
-      <div style="background:#ffffff;border-radius:12px;padding:24px 28px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
-        <div style="font-size:15px;font-weight:700;color:#1d1d1f;margin-bottom:8px;">Does this require an internet activation server?</div>
-        <div style="font-size:14px;color:#6e6e73;line-height:1.65;">No. The module is fully self-contained. No telemetry, no SaaS, no key server. It only communicates with your configured WooCommerce endpoint.</div>
-      </div>
-
-      <div style="background:#ffffff;border-radius:12px;padding:24px 28px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
-        <div style="font-size:15px;font-weight:700;color:#1d1d1f;margin-bottom:8px;">Which WooCommerce versions are supported?</div>
-        <div style="font-size:14px;color:#6e6e73;line-height:1.65;">Any version exposing the <code style="font-size:12px;background:#f5f5f7;padding:1px 5px;border-radius:4px;">wc/v3</code> REST API &#8212; WooCommerce 3.5 and later.</div>
-      </div>
-
-      <div style="background:#ffffff;border-radius:12px;padding:24px 28px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
-        <div style="font-size:15px;font-weight:700;color:#1d1d1f;margin-bottom:8px;">What happens when a sync fails?</div>
-        <div style="font-size:14px;color:#6e6e73;line-height:1.65;">All errors are written to Sync Logs with level <strong>Error</strong>, WooCommerce reference, and Odoo target. Per-cron error isolation ensures one failing record never blocks the batch.</div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════
-       TROUBLESHOOTING
-  ═══════════════════════════════════════════════════════ -->
-  <div style="padding:56px 32px;">
-
-    <div style="text-align:center;margin-bottom:40px;">
-      <h2 style="font-size:30px;font-weight:700;letter-spacing:-.5px;color:#1d1d1f;margin:0 0 12px;">Troubleshooting</h2>
-    </div>
-
-    <table style="width:100%;border-collapse:collapse;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
-      <thead>
-        <tr style="background:#1d1d1f;">
-          <th style="padding:14px 20px;text-align:left;font-size:12px;font-weight:600;color:#ffffff;letter-spacing:.5px;text-transform:uppercase;width:38%;">Symptom</th>
-          <th style="padding:14px 20px;text-align:left;font-size:12px;font-weight:600;color:#ffffff;letter-spacing:.5px;text-transform:uppercase;">Where to look</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #f0f0f0;background:#ffffff;">
-          <td style="padding:13px 20px;font-size:13px;color:#1d1d1f;font-weight:500;">Connection test fails</td>
-          <td style="padding:13px 20px;font-size:13px;color:#6e6e73;">Instance form &#8594; check URL and keys &#8594; click Test Connection</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;background:#fafafa;">
-          <td style="padding:13px 20px;font-size:13px;color:#1d1d1f;font-weight:500;">Webhook not firing</td>
-          <td style="padding:13px 20px;font-size:13px;color:#6e6e73;">WooCommerce &#8594; Settings &#8594; Advanced &#8594; Webhooks &#8594; Delivery log</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;background:#ffffff;">
-          <td style="padding:13px 20px;font-size:13px;color:#1d1d1f;font-weight:500;">Sync error in Odoo</td>
-          <td style="padding:13px 20px;font-size:13px;color:#6e6e73;">WooCommerce &#8594; Sync Logs &#8594; filter by Level = Error</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;background:#fafafa;">
-          <td style="padding:13px 20px;font-size:13px;color:#1d1d1f;font-weight:500;">SSL error on staging</td>
-          <td style="padding:13px 20px;font-size:13px;color:#6e6e73;">Instance form &#8594; uncheck <strong>Verify SSL</strong> (dev only)</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;background:#ffffff;">
-          <td style="padding:13px 20px;font-size:13px;color:#1d1d1f;font-weight:500;">Cron not running</td>
-          <td style="padding:13px 20px;font-size:13px;color:#6e6e73;">Settings &#8594; Technical &#8594; Scheduled Actions &#8594; activate the job</td>
-        </tr>
-        <tr style="background:#fafafa;">
-          <td style="padding:13px 20px;font-size:13px;color:#1d1d1f;font-weight:500;">Log table growing large</td>
-          <td style="padding:13px 20px;font-size:13px;color:#6e6e73;">Settings &#8594; WooCommerce &#8594; reduce <strong>Log Retention</strong> (default 30 days)</td>
-        </tr>
-      </tbody>
-    </table>
-
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════
-       SUPPORT / FOOTER
-  ═══════════════════════════════════════════════════════ -->
-  <div style="background:#1d1d1f;border-radius:16px;margin:0 24px;padding:48px 40px;text-align:center;">
-
-    <div style="font-size:24px;font-weight:700;color:#ffffff;margin-bottom:12px;">Need help?</div>
-    <div style="font-size:15px;color:#98989d;line-height:1.65;margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;">
-      We answer every support request. Reach out and we'll get you up and running.
-    </div>
-
-    <table style="margin:0 auto;border-collapse:separate;border-spacing:0;">
-      <tr>
-        <td style="padding:0 6px;">
-          <div style="background:#2c2c2e;border-radius:10px;padding:16px 24px;min-width:150px;">
-            <div style="font-size:11px;font-weight:600;color:#98989d;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;">Email</div>
-            <div style="font-size:14px;font-weight:600;color:#ffffff;">support@digitalnatie.be</div>
-          </div>
-        </td>
-        <td style="padding:0 6px;">
-          <div style="background:#2c2c2e;border-radius:10px;padding:16px 24px;min-width:150px;">
-            <div style="font-size:11px;font-weight:600;color:#98989d;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;">Website</div>
-            <div style="font-size:14px;font-weight:600;color:#ffffff;">digitalnatie.be</div>
-          </div>
-        </td>
-        <td style="padding:0 6px;">
-          <div style="background:#2c2c2e;border-radius:10px;padding:16px 24px;min-width:150px;">
-            <div style="font-size:11px;font-weight:600;color:#98989d;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;">License</div>
-            <div style="font-size:14px;font-weight:600;color:#ffffff;">OPL-1 &#183; &#8364;199 one-time</div>
-          </div>
-        </td>
+      <tr style="border-bottom:1px solid #f0f0f0;background:#ffffff;">
+        <td style="padding:12px 18px;font-size:13px;color:#1d1d1f;font-weight:500;">Export Inventory (Odoo &#8594; WooCommerce)</td>
+        <td style="padding:12px 18px;font-size:13px;color:#6e6e73;">Every 30 minutes</td>
+        <td style="padding:12px 18px;text-align:center;font-size:12px;color:#999999;">No</td>
       </tr>
-    </table>
+      <tr style="border-bottom:1px solid #f0f0f0;background:#fafafa;">
+        <td style="padding:12px 18px;font-size:13px;color:#1d1d1f;font-weight:500;">Export Prices (Odoo &#8594; WooCommerce)</td>
+        <td style="padding:12px 18px;font-size:13px;color:#6e6e73;">Every 6 hours</td>
+        <td style="padding:12px 18px;text-align:center;font-size:12px;color:#999999;">No</td>
+      </tr>
+      <tr style="border-bottom:1px solid #f0f0f0;background:#ffffff;">
+        <td style="padding:12px 18px;font-size:13px;color:#1d1d1f;font-weight:500;">Sync Fulfillment Status</td>
+        <td style="padding:12px 18px;font-size:13px;color:#6e6e73;">Every 30 minutes</td>
+        <td style="padding:12px 18px;text-align:center;font-size:12px;color:#999999;">No</td>
+      </tr>
+      <tr style="background:#f0f8ee;">
+        <td style="padding:12px 18px;font-size:13px;color:#1d1d1f;font-weight:700;">Cleanup Old Sync Logs</td>
+        <td style="padding:12px 18px;font-size:13px;color:#6e6e73;">Daily</td>
+        <td style="padding:12px 18px;text-align:center;font-size:13px;color:#2e9e4f;font-weight:700;">&#10003; Yes</td>
+      </tr>
+    </tbody>
+  </table>
 
-    <div style="margin-top:36px;padding-top:24px;border-top:1px solid #2c2c2e;font-size:12px;color:#636366;">
-      Odoo&#174; is a registered trademark of Odoo S.A. &#183; WooCommerce&#174; is a registered trademark of Automattic Inc.
+</div>
+
+<!-- ═══════════════ INSTALLATION ═══════════════ -->
+<div style="background:#f5f5f7;padding:52px 28px;">
+
+  <div style="text-align:center;margin-bottom:32px;">
+    <div style="font-size:26px;font-weight:700;color:#1d1d1f;margin-bottom:10px;">Up and running in minutes</div>
+  </div>
+
+  <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+    <tr>
+      <td width="50%" valign="top" style="padding-right:8px;">
+        <div style="background:#ffffff;border-radius:10px;padding:24px 22px;">
+          <div style="font-size:14px;font-weight:700;color:#1d1d1f;margin-bottom:14px;">Requirements</div>
+          <div style="font-size:13px;color:#333333;padding:5px 0;border-bottom:1px solid #f0f0f0;"><span style="color:#2e9e4f;font-weight:700;margin-right:7px;">&#10003;</span>Odoo 18.0 Community (or Enterprise)</div>
+          <div style="font-size:13px;color:#333333;padding:5px 0;border-bottom:1px solid #f0f0f0;"><span style="color:#2e9e4f;font-weight:700;margin-right:7px;">&#10003;</span>Python <code style="background:#f5f5f7;padding:1px 4px;border-radius:3px;">requests</code> library (ships with Odoo)</div>
+          <div style="font-size:13px;color:#333333;padding:5px 0;"><span style="color:#2e9e4f;font-weight:700;margin-right:7px;">&#10003;</span>WooCommerce 3.5+ with REST API enabled</div>
+        </div>
+      </td>
+      <td width="50%" valign="top" style="padding-left:8px;">
+        <div style="background:#ffffff;border-radius:10px;padding:24px 22px;">
+          <div style="font-size:14px;font-weight:700;color:#1d1d1f;margin-bottom:14px;">Quick install</div>
+          <div style="font-size:13px;color:#333333;padding:6px 0;border-bottom:1px solid #f0f0f0;">
+            <span style="display:inline-block;background:#1d1d1f;color:#ffffff;font-size:10px;font-weight:700;width:18px;height:18px;border-radius:50%;text-align:center;line-height:18px;margin-right:8px;">1</span>Copy <code style="background:#f5f5f7;padding:1px 4px;border-radius:3px;">digitalnatie_woocommerce/</code> into addons path
+          </div>
+          <div style="font-size:13px;color:#333333;padding:6px 0;border-bottom:1px solid #f0f0f0;">
+            <span style="display:inline-block;background:#1d1d1f;color:#ffffff;font-size:10px;font-weight:700;width:18px;height:18px;border-radius:50%;text-align:center;line-height:18px;margin-right:8px;">2</span>Apps &#8594; <strong>Update Apps List</strong> &#8594; Install
+          </div>
+          <div style="font-size:13px;color:#333333;padding:6px 0;border-bottom:1px solid #f0f0f0;">
+            <span style="display:inline-block;background:#1d1d1f;color:#ffffff;font-size:10px;font-weight:700;width:18px;height:18px;border-radius:50%;text-align:center;line-height:18px;margin-right:8px;">3</span>WooCommerce &#8594; Instances &#8594; <strong>New</strong> &#8594; enter URL + keys
+          </div>
+          <div style="font-size:13px;color:#333333;padding:6px 0;">
+            <span style="display:inline-block;background:#1d1d1f;color:#ffffff;font-size:10px;font-weight:700;width:18px;height:18px;border-radius:50%;text-align:center;line-height:18px;margin-right:8px;">4</span>Click <strong>Test Connection</strong> &#8594; Configure &#8594; done
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+<!-- ═══════════════ SECURITY ═══════════════ -->
+<div style="background:#ffffff;padding:52px 28px;">
+
+  <div style="text-align:center;margin-bottom:32px;">
+    <div style="font-size:26px;font-weight:700;color:#1d1d1f;margin-bottom:10px;">Built with security first</div>
+  </div>
+
+  <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+    <tr>
+      <td width="25%" valign="top" style="padding-right:6px;">
+        <div style="background:#f5f5f7;border-radius:10px;padding:22px 16px;text-align:center;">
+          <div style="font-size:28px;margin-bottom:8px;">&#128274;</div>
+          <div style="font-size:12px;font-weight:700;color:#1d1d1f;margin-bottom:5px;">HMAC-SHA256</div>
+          <div style="font-size:11px;color:#6e6e73;line-height:1.5;">Webhook payloads validated with per-instance secret</div>
+        </div>
+      </td>
+      <td width="25%" valign="top" style="padding-left:3px;padding-right:3px;">
+        <div style="background:#f5f5f7;border-radius:10px;padding:22px 16px;text-align:center;">
+          <div style="font-size:28px;margin-bottom:8px;">&#128373;</div>
+          <div style="font-size:12px;font-weight:700;color:#1d1d1f;margin-bottom:5px;">Zero Telemetry</div>
+          <div style="font-size:11px;color:#6e6e73;line-height:1.5;">No outbound calls except to your WooCommerce endpoint</div>
+        </div>
+      </td>
+      <td width="25%" valign="top" style="padding-left:3px;padding-right:3px;">
+        <div style="background:#f5f5f7;border-radius:10px;padding:22px 16px;text-align:center;">
+          <div style="font-size:28px;margin-bottom:8px;">&#128101;</div>
+          <div style="font-size:12px;font-weight:700;color:#1d1d1f;margin-bottom:5px;">Admin Restricted</div>
+          <div style="font-size:11px;color:#6e6e73;line-height:1.5;">Consumer Key/Secret restricted to Odoo administrators</div>
+        </div>
+      </td>
+      <td width="25%" valign="top" style="padding-left:6px;">
+        <div style="background:#f5f5f7;border-radius:10px;padding:22px 16px;text-align:center;">
+          <div style="font-size:28px;margin-bottom:8px;">&#128279;</div>
+          <div style="font-size:12px;font-weight:700;color:#1d1d1f;margin-bottom:5px;">SSL Verified</div>
+          <div style="font-size:11px;color:#6e6e73;line-height:1.5;">SSL verification on by default, configurable per store</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<div style="background:#f5f5f7;padding:52px 28px;">
+
+  <div style="text-align:center;margin-bottom:32px;">
+    <div style="font-size:26px;font-weight:700;color:#1d1d1f;margin-bottom:10px;">Frequently asked questions</div>
+  </div>
+
+  <div style="max-width:680px;margin:0 auto;">
+
+    <div style="background:#ffffff;border-radius:10px;padding:22px 24px;margin-bottom:10px;">
+      <div style="font-size:14px;font-weight:700;color:#1d1d1f;margin-bottom:7px;">Does this overwrite Odoo stock with WooCommerce stock?</div>
+      <div style="font-size:13px;color:#6e6e73;line-height:1.65;">No. Scheduled and manual Export Inventory always pushes Odoo &#8594; WooCommerce. To import stock from WooCommerce (one-off recovery), use <strong>Import Stock (Recovery)</strong> &#8212; gated by a confirmation dialog.</div>
+    </div>
+
+    <div style="background:#ffffff;border-radius:10px;padding:22px 24px;margin-bottom:10px;">
+      <div style="font-size:14px;font-weight:700;color:#1d1d1f;margin-bottom:7px;">Can I connect multiple WooCommerce stores?</div>
+      <div style="font-size:13px;color:#6e6e73;line-height:1.65;">Yes. Create one instance record per store. Each cron job iterates all active instances independently &#8212; a failing store never blocks the others.</div>
+    </div>
+
+    <div style="background:#ffffff;border-radius:10px;padding:22px 24px;margin-bottom:10px;">
+      <div style="font-size:14px;font-weight:700;color:#1d1d1f;margin-bottom:7px;">Does this require an internet activation server?</div>
+      <div style="font-size:13px;color:#6e6e73;line-height:1.65;">No. The module is fully self-contained. No telemetry, no SaaS, no key server. It only communicates with your configured WooCommerce endpoint.</div>
+    </div>
+
+    <div style="background:#ffffff;border-radius:10px;padding:22px 24px;margin-bottom:10px;">
+      <div style="font-size:14px;font-weight:700;color:#1d1d1f;margin-bottom:7px;">Which WooCommerce versions are supported?</div>
+      <div style="font-size:13px;color:#6e6e73;line-height:1.65;">Any version exposing the <code style="background:#f5f5f7;padding:1px 5px;border-radius:3px;">wc/v3</code> REST API &#8212; WooCommerce 3.5 and later.</div>
+    </div>
+
+    <div style="background:#ffffff;border-radius:10px;padding:22px 24px;">
+      <div style="font-size:14px;font-weight:700;color:#1d1d1f;margin-bottom:7px;">What happens when a sync fails?</div>
+      <div style="font-size:13px;color:#6e6e73;line-height:1.65;">All errors are written to Sync Logs with level <strong>Error</strong>, WooCommerce reference, and Odoo target. Per-cron error isolation ensures one failing record never blocks the batch.</div>
     </div>
 
   </div>
 
 </div>
+
+<!-- ═══════════════ TROUBLESHOOTING ═══════════════ -->
+<div style="background:#ffffff;padding:52px 28px;">
+
+  <div style="text-align:center;margin-bottom:32px;">
+    <div style="font-size:26px;font-weight:700;color:#1d1d1f;margin-bottom:10px;">Troubleshooting</div>
+  </div>
+
+  <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-radius:10px;overflow:hidden;">
+    <thead>
+      <tr style="background:#1d1d1f;">
+        <th style="padding:13px 18px;text-align:left;font-size:11px;font-weight:700;color:#ffffff;letter-spacing:.6px;text-transform:uppercase;width:38%;">Symptom</th>
+        <th style="padding:13px 18px;text-align:left;font-size:11px;font-weight:700;color:#ffffff;letter-spacing:.6px;text-transform:uppercase;">Where to look</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #f0f0f0;background:#ffffff;">
+        <td style="padding:12px 18px;font-size:13px;color:#1d1d1f;font-weight:500;">Connection test fails</td>
+        <td style="padding:12px 18px;font-size:13px;color:#6e6e73;">Instance form &#8594; check URL and keys &#8594; click Test Connection</td>
+      </tr>
+      <tr style="border-bottom:1px solid #f0f0f0;background:#fafafa;">
+        <td style="padding:12px 18px;font-size:13px;color:#1d1d1f;font-weight:500;">Webhook not firing</td>
+        <td style="padding:12px 18px;font-size:13px;color:#6e6e73;">WooCommerce &#8594; Settings &#8594; Advanced &#8594; Webhooks &#8594; Delivery log</td>
+      </tr>
+      <tr style="border-bottom:1px solid #f0f0f0;background:#ffffff;">
+        <td style="padding:12px 18px;font-size:13px;color:#1d1d1f;font-weight:500;">Sync error in Odoo</td>
+        <td style="padding:12px 18px;font-size:13px;color:#6e6e73;">WooCommerce &#8594; Sync Logs &#8594; filter by Level = Error</td>
+      </tr>
+      <tr style="border-bottom:1px solid #f0f0f0;background:#fafafa;">
+        <td style="padding:12px 18px;font-size:13px;color:#1d1d1f;font-weight:500;">SSL error on staging</td>
+        <td style="padding:12px 18px;font-size:13px;color:#6e6e73;">Instance form &#8594; uncheck <strong>Verify SSL</strong> (dev only)</td>
+      </tr>
+      <tr style="border-bottom:1px solid #f0f0f0;background:#ffffff;">
+        <td style="padding:12px 18px;font-size:13px;color:#1d1d1f;font-weight:500;">Cron not running</td>
+        <td style="padding:12px 18px;font-size:13px;color:#6e6e73;">Settings &#8594; Technical &#8594; Scheduled Actions &#8594; activate the job</td>
+      </tr>
+      <tr style="background:#fafafa;">
+        <td style="padding:12px 18px;font-size:13px;color:#1d1d1f;font-weight:500;">Log table growing large</td>
+        <td style="padding:12px 18px;font-size:13px;color:#6e6e73;">Settings &#8594; WooCommerce &#8594; reduce <strong>Log Retention</strong> (default 30 days)</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<div style="background:#1d1d1f;padding:44px 36px;text-align:center;">
+
+  <div style="font-size:22px;font-weight:700;color:#ffffff;margin-bottom:10px;">Need help?</div>
+  <div style="font-size:14px;color:#98989d;line-height:1.65;margin-bottom:28px;">We answer every support request. Reach out and we&#8217;ll get you up and running.</div>
+
+  <table align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+    <tr>
+      <td style="padding:0 5px;">
+        <div style="background:#2c2c2e;border-radius:9px;padding:14px 22px;min-width:140px;">
+          <div style="font-size:10px;font-weight:700;color:#98989d;letter-spacing:.6px;text-transform:uppercase;margin-bottom:5px;">Email</div>
+          <div style="font-size:13px;font-weight:600;color:#ffffff;">support@digitalnatie.be</div>
+        </div>
+      </td>
+      <td style="padding:0 5px;">
+        <div style="background:#2c2c2e;border-radius:9px;padding:14px 22px;min-width:140px;">
+          <div style="font-size:10px;font-weight:700;color:#98989d;letter-spacing:.6px;text-transform:uppercase;margin-bottom:5px;">Website</div>
+          <div style="font-size:13px;font-weight:600;color:#ffffff;">digitalnatie.be</div>
+        </div>
+      </td>
+      <td style="padding:0 5px;">
+        <div style="background:#2c2c2e;border-radius:9px;padding:14px 22px;min-width:140px;">
+          <div style="font-size:10px;font-weight:700;color:#98989d;letter-spacing:.6px;text-transform:uppercase;margin-bottom:5px;">License</div>
+          <div style="font-size:13px;font-weight:600;color:#ffffff;">OPL-1 &#183; &#8364;199 one-time</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <div style="margin-top:32px;padding-top:22px;border-top:1px solid #2c2c2e;font-size:11px;color:#636366;">
+    Odoo&#174; is a registered trademark of Odoo S.A. &#183; WooCommerce&#174; is a registered trademark of Automattic Inc.
+  </div>
+
+</div>
+
+</div><!-- end outer wrapper -->
 
 </body>
 </html>
