@@ -9,6 +9,11 @@ external SaaS, without telemetry, without activation keys.
 
 ---
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/0b6aaa81-b3b0-4b0a-88b8-030d61367cb6" />
+<img width="1710" height="381" alt="image" src="https://github.com/user-attachments/assets/7884633c-8ca3-4d54-8f1d-13d6bf6753dc" />
+<img width="1731" height="354" alt="image" src="https://github.com/user-attachments/assets/b1825fbd-e505-4fea-9777-a8c8a803e4e2" />
+<img width="1660" height="349" alt="image" src="https://github.com/user-attachments/assets/d6da186f-f488-48a5-8542-b970bca2127d" />
+
+
 
 ## Features
 
